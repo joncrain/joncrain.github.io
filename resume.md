@@ -70,4 +70,6 @@ telephone system, and other network and production related equipment
 
 ## education
 
-### Bachelor of Applied Arts, Central Michigan University (Magna Cum Laude) 2003
+### Bachelor of Applied Arts, Central Michigan University
+
+#### 1999 - 2003 | Graduated Magna Cum Laude
