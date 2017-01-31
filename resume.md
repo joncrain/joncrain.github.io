@@ -4,6 +4,8 @@ title: resume
 permalink: /resume/
 ---
 
+![workspace]({{ site.url }}/assets/workspace.jpg)
+
 ## technologies
 
 ### Operating Systems:
