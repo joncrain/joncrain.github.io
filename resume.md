@@ -5,6 +5,7 @@ permalink: /resume/
 ---
 
 ## technologies
+
 ### Operating Systems:
 - macOS/Server
 - Windows/Server
@@ -37,6 +38,7 @@ permalink: /resume/
 ## experience
 
 ### Application Administrator, Central Michigan University
+
 #### December 2011 – Present
 - responsible for all hosted departmental applications
 - planned and coordinated application upgrades with external vendors
@@ -49,6 +51,7 @@ permalink: /resume/
 - Helped coordinate and train team of ~15 student workers
 
 ### Assistant Manager – Technical Services, Central Michigan University
+
 #### October 2009 – December 2011
 - performed certified diagnosis and repairs on university owned and student Apple computers
 - provided on-site repair and troubleshooting for administrative staff computers and printers
@@ -57,6 +60,7 @@ Coordinator of the Center for Creative Media, CMU March 2006 – December 2011
 - developed and maintained databases for the School of Music’s internal operations
 
 ### IT/Production Director, Grace Church – Mount Pleasant, MI
+
 #### May 2003 – February 2006
 - purchased, installed, and maintained Windows Server 2003, Mac OS X Server, VoIP
 telephone system, and other network and production related equipment
