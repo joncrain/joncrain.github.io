@@ -8,10 +8,10 @@ permalink: /about/
 
 ## Coaching
 
-I have coached at Mount Pleasant High School for the past nine years. I started out
-assisting, but quickly became the JV head coach where I worked with the boys program
-for eight seasons and the girls program for five. In 2015, I stepped into the head
-coaching position for the boys varsity team.
+I have coached in the soccer program at Mount Pleasant High School for the past
+nine years. I started out as an assistant, but quickly became the junior varsity head coach where
+I worked with the boys program for eight seasons and the girls program for five.
+In 2015, I stepped into the head coaching role for the boys varsity team.
 
 Coaching gives me the opportunity to stretch my life in areas that I may not naturally
 look to grow. In my day job I sit at a computer for nearly 8 hours a day. Coaching
@@ -20,7 +20,27 @@ know so many different families that I would not otherwise have the opportunity 
 interact with. It also stretches my team building skills. I am far from a perfect
 coach, but I enjoy the challenge in this non technical area of my life.
 
+![chicago]({{ site.url }}/assets/chicago.jpg)
+
+## Photography
+
+For a number of years I owned a DSLR with an ever increasing number of lenses and
+accessories. Being that the best camera is the one you have with you, I realized
+I rarely had this camera with me and at that point in time the iPhone was starting
+to get really good. The rest is history. I try to keep a DayOne journal of a photo
+everyday with varied success. I hope to share that one day with everyone, but I
+haven't quite got around to it yet and it's really not that good yet. I am a bit
+of a hack with photography (like a lot of other areas), but I do have a claim to
+fame. In 2007, my then boss was writing for ProAudio Review Magazine and asked
+me to get a few photos of the microphone he was reviewing. I ended up with a
+handful from the concert hall and sent them on the way. They loved the photos
+and ended up putting them on the [front cover]({{ site.url }}/assets/cover.jpg)
+and in a [full page]({{ site.url }}/assets/page1.jpg)
+[spread]({{ site.url }}/assets/page2.jpg).
+
 ![guitars]({{ site.url }}/assets/guitar.jpg)
+
+## Guitars
 
 For over ten years of my life, I identified myself as a guitarist. While I still
 like to think I can play, I definitely don't have the time to put in it that I
