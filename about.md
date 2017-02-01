@@ -26,11 +26,12 @@ coach, but I enjoy the challenge in this non technical area of my life.
 
 For a number of years I owned a DSLR with an ever increasing number of lenses and
 accessories. Being that the best camera is the one you have with you, I realized
-I rarely had this camera with me and at that point in time the iPhone was starting
-to get really good. The rest is history. I try to keep a DayOne journal of a photo
+I rarely had this camera with me, but I always had my iPhone. The rest is history.
+I try to keep a DayOne journal of a photo
 everyday with varied success. I hope to share that one day with everyone, but I
-haven't quite got around to it yet and it's really not that good yet. I am a bit
-of a hack with photography (like a lot of other areas), but I do have a claim to
+haven't quite got around to it and it's really not that good yet.
+
+I am a bit of a hack with photography (like a lot of other areas), but I do have a claim to
 fame. In 2007, my then boss was writing for ProAudio Review Magazine and asked
 me to get a few photos of the microphone he was reviewing. I ended up with a
 handful from the concert hall and sent them on the way. They loved the photos
@@ -44,4 +45,4 @@ and in a [full page]({{ site.url }}/assets/page1.jpg)
 
 For over ten years of my life, I identified myself as a guitarist. While I still
 like to think I can play, I definitely don't have the time to put in it that I
-once had.
+once had. Maybe someday I'll update what my current gear is.

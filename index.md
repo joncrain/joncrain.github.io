@@ -5,4 +5,8 @@
 layout: home
 ---
 
-![joncrain]({{ site.url }}/assets/joncrain.jpg)
+# Jon Crain
+
+_a human_
+
+![san diego]({{ site.url }}/assets/sandiego.jpg)
