@@ -75,36 +75,14 @@ Python/Django.
 
 ## Technologies
 
-### Operating Systems:
-- macOS/Server
-- Windows/Server
-- Debian/Ubuntu
-
-### Software:
-- VMware ESXi/Fusion
-- SCCM
-- Packer
-- Vagrant
-- Puppet
-- Chocolatey
-- munki
-- AutoPkg
-- DeployStudio
-- Office/Office365
-- G Suite
-- Adobe CC Enterprise Admin
-- Azure
-- GitLab
-- Nginx
-- OpManager
-
-### Programming:
-- Bash
-- Python
-- PHP
-- SQL
-- Django
-- Git
+|      OS/Hypervisors      |       Software       | Programming | Management Tools | Web Technologies |
+|:------------------------:|:--------------------:|:-----------:|:----------------:|------------------|
+| macOS                    | Microsoft Office     | Bash        | munki/AutoPkg    | Azure            |
+| macOS Server             | Adobe Creative Cloud | Python      | Puppet           | Office 365       |
+| Windows 7 +              | VMWare Fusion        | PHP         | DeployStudio     | G Suite          |
+| Windows Server 2008 R2 + | Slack                | SQL         | SCCM             | Nginx            |
+| VMWare ESXi              |                      | Git         | Chocolatey       |                  |
+| Debian/Ubuntu            |                      | Django      | OpManager        |                  |
 
 ## Certifications
 
