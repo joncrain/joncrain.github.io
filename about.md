@@ -39,6 +39,10 @@ and ended up putting them on the [front cover]({{ site.url }}/assets/cover.jpg)
 and in a [full page]({{ site.url }}/assets/page1.jpg)
 [spread]({{ site.url }}/assets/page2.jpg).
 
+All the photos on this site were taken be me on various iPhones
+with the notable exception of the home page, which was actually taken by my talented
+wife with some old Canon camera.
+
 ![guitars]({{ site.url }}/assets/guitar.jpg)
 
 ## Guitars
