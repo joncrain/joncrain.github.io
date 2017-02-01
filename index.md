@@ -5,8 +5,6 @@
 layout: home
 ---
 
-# Jon Crain
-
 _a human_
 
 ![san diego]({{ site.url }}/assets/sandiego.jpg)
