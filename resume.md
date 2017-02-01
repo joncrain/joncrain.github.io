@@ -75,7 +75,7 @@ Python/Django.
 
 ## Technologies
 
-|OS/Hypervisors            | Software             | Programming | Management Tools | Web Technologies |
+| OS/Hypervisors           | Software             | Programming | Management Tools | Web Technologies |
 |--------------------------|----------------------|-------------|------------------|------------------|
 | macOS                    | Microsoft Office     | Bash        | munki/AutoPkg    | Azure            |
 | macOS Server             | Adobe Creative Cloud | Python      | Puppet           | Office 365       |
