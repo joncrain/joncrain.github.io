@@ -73,6 +73,7 @@ Python/Django.
 - developed training materials for common computer tasks
 - handled computer repair, maintenance, and installations
 
+
 ## Technologies
 
 | OS/Hypervisors           | Software             | Programming | Management Tools | Web Technologies |
@@ -83,6 +84,7 @@ Python/Django.
 | Windows Server 2008 R2 + | Slack                | SQL         | SCCM             | Nginx            |
 | VMWare ESXi              |                      | Git         | Chocolatey       |                  |
 | Debian/Ubuntu            |                      | Django      | OpManager        |                  |
+
 
 ## Certifications
 
@@ -95,6 +97,7 @@ Python/Django.
 ### Apple Certified Macintosh Technician
 
 #### 2009 - 2012
+
 
 ## Education
 
