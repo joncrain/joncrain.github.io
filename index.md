@@ -5,6 +5,6 @@
 layout: home
 ---
 
-_a human_
+> a human
 
 ![san diego]({{ site.url }}/assets/sandiego.jpg)

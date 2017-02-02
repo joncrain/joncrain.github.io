@@ -4,6 +4,8 @@ title: resume
 permalink: /resume/
 ---
 
+> if you're looking for something a little ~~shorter~~ more professional, try [this]({{ site.url }}/assets/resume.pdf)
+
 ![workspace]({{ site.url }}/assets/workspace.jpg)
 
 ## Professional Experience
@@ -90,9 +92,7 @@ Python/Django.
 
 ### Linux Foundation Certified System Administrator
 
-#### 2016 - Present | LFCS-1600-001164-0100
-
-[![Linux Foundation Certified System Administrator]({{ site.url }}/assets/lfcs.png)](https://training.linuxfoundation.org/certification/verify-linux-certifications)
+#### 2016 - Present | [LFCS-1600-001164-0100](https://training.linuxfoundation.org/certification/verify-linux-certifications)
 
 ### Apple Certified Macintosh Technician
 

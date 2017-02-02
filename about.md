@@ -4,11 +4,13 @@ title: about
 permalink: /about/
 ---
 
+> a random assortment of interests.
+
 ![soccer]({{ site.url }}/assets/soccer.jpg)
 
 ## Coaching
 
-I have coached in the soccer program at Mount Pleasant High School for the past
+I have coached in the soccer program at [Mount Pleasant High School](http://mtpleasantschools.net//site/Default.aspx?PageID=1723) for the past
 nine years. I started out as an assistant, but quickly became the junior varsity head coach where
 I worked with the boys program for eight seasons and the girls program for five.
 In 2015, I stepped into the head coaching role for the boys varsity team.
@@ -19,6 +21,8 @@ forces me to get outside everyday and get some fresh air. It also allows me to g
 know so many different families that I would not otherwise have the opportunity to
 interact with. It also stretches my team building skills. I am far from a perfect
 coach, but I enjoy the challenge in this non technical area of my life.
+
+---
 
 ![chicago]({{ site.url }}/assets/chicago.jpg)
 
@@ -42,6 +46,20 @@ and in a [full page]({{ site.url }}/assets/page1.jpg)
 All the photos on this site were taken be me on various iPhones
 with the notable exception of the home page, which was actually taken by my talented
 wife with some old Canon camera.
+
+---
+
+![bike]({{ site.url }}/assets/bike.jpg)
+
+## Bike Commuting
+
+I'd like to say biking, but the vast majority of my biking time is spent going to
+and from work. I commute nearly every day whether its five below or 90 in the shade.
+I find it very relaxing and enjoyable 95% of the time. The other 5% can be challenging,
+but to me it's been worth it. My main commuter is a [Priority Eight](https://www.prioritybicycles.com/products/theeight), but I'll ride
+my fixed gear or 29er on occasion as well.
+
+---
 
 ![guitars]({{ site.url }}/assets/guitar.jpg)
 
