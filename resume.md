@@ -8,13 +8,13 @@ permalink: /resume/
 
 ![workspace]({{ site.url }}/assets/workspace.jpg)
 
-## Professional Experience
+### **Professional Experience**
 
-### Application Administrator, Central Michigan University
+#### **Application Administrator, Central Michigan University**
 
-#### December 2011 – Present
+##### **December 2011 – Present**
 
-As an application administrator I get to be a jack of all trades. I am primarily
+As an application administrator I am a jack of all trades. I am primarily
 responsible for our third party on site hosted applications, but I have my hands
 on many projects around the office and can spend time in specific areas as needed.
 This has allowed me to develop my skills in lots of interesting areas. I have
@@ -32,9 +32,9 @@ Python/Django.
 - Managed 500+ macOS computers
 - Helped coordinate and train team of ~15 student workers
 
-### Assistant Manager – Technical Services, CMU
+#### **Assistant Manager – Technical Services, CMU**
 
-#### October 2009 – December 2011
+##### **October 2009 – December 2011**
 - performed certified diagnosis and repairs on university owned and student Apple computers
 - provided on-site repair and troubleshooting for administrative staff computers and printers
 - malware, virus cleaning, and PC setup
@@ -44,9 +44,9 @@ Python/Django.
 - maintained the connect.cmich.edu website
 - provided database support for the Telecom area
 
-### Coordinator of the Center for Creative Media, CMU
+#### **Coordinator of the Center for Creative Media, CMU**
 
-#### March 2006 – December 2011
+##### **March 2006 – December 2011**
 
 - assisted with IT work orders assigned to the School of Music (CCFA Technician)
 - performed yearly configuration, installation, and maintenance of 120+ computers in four labs, classrooms, staff and faculty offices
@@ -61,9 +61,10 @@ Python/Django.
 - design for White Pine Music releases including CD covers, posters, and web advertising
 - oversaw organization of storage rooms and studios
 
-### IT/Production Director, Grace Church – Mount Pleasant, MI
+#### **IT/Production Director, Grace Church – Mount Pleasant, MI**
 
-#### May 2003 – February 2006
+##### **May 2003 – February 2006**
+
 - managed a team of six to ten volunteers in charge of production for weekend services and special events. Production for services and events includes audio, lighting, video, and technical direction
 - scheduled teams, created event reviews, provided equipment maintenance and team building for those volunteers serving in production
 - created manual for training volunteers on signal flow and sound engineering and taught yearly classes on technical issues
@@ -75,32 +76,46 @@ Python/Django.
 - developed training materials for common computer tasks
 - handled computer repair, maintenance, and installations
 
+### **Freelance Work**
 
-## Technologies
+#### **Computer Support/Web Developer, Morey Courts - Mount Pleasant, MI**
+
+##### **May 2010 - Present**
+
+- G Suite administrator
+- Managed/developed [moreycourts.com](http://www.moreycourts.com), [mpicearena.org](http://www.mpicearena.org), [isabellasportsplex.com](http://www.isabellasportsplex.com)
+- Setup Azure environment for backups, file sharing and servers
+- Setup/managed Meraki Systems Manager MDM
+
+
+### **Technologies**
 
 | OS/Hypervisors           | Software             | Programming | Management Tools | Web Technologies |
 |--------------------------|----------------------|-------------|------------------|------------------|
 | macOS                    | Microsoft Office     | Bash        | munki/AutoPkg    | Azure            |
 | macOS Server             | Adobe Creative Cloud | Python      | Puppet           | Office 365       |
-| Windows 7 +              | VMWare Fusion        | PHP         | DeployStudio     | G Suite          |
-| Windows Server 2008 R2 + | Slack                | SQL         | SCCM             | Nginx            |
+| Windows 7 - 10           | VMWare Fusion        | PHP         | DeployStudio     | G Suite          |
+| Windows Server 2008 - 2016 | Slack                | SQL         | SCCM             | Nginx            |
 | VMWare ESXi              |                      | Git         | Chocolatey       |                  |
 | Debian/Ubuntu            |                      | Django      | OpManager        |                  |
 
 
-## Certifications
+### **Certifications**
 
-### Linux Foundation Certified System Administrator
+#### **Linux Foundation Certified System Administrator**
 
-#### 2016 - Present | [LFCS-1600-001164-0100](https://training.linuxfoundation.org/certification/verify-linux-certifications)
+##### **2016 - Present | [LFCS-1600-001164-0100](https://training.linuxfoundation.org/certification/verify-linux-certifications)**
 
-### Apple Certified Macintosh Technician
+#### **Apple Certified Macintosh Technician**
 
-#### 2009 - 2012
+##### **2009 - 2012**
 
 
-## Education
+### **Education**
 
-### Bachelor of Applied Arts, Central Michigan University
+#### **Bachelor of Applied Arts, Central Michigan University**
 
-#### 1999 - 2003 | Graduated Magna Cum Laude
+##### **1999 - 2003 | Graduated Magna Cum Laude**
+
+- Major: Entrepreneurship
+- Minor: Industrial Engineering Technology

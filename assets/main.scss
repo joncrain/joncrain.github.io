@@ -21,14 +21,14 @@ table td, table th {
 }
 
 table thead th {
-  background: -webkit-gradient( linear, left top, left bottom, color-stop(0.05, #f2f2f2), color-stop(1, #C7C7C7) );
-  background: -moz-linear-gradient( center top, #f2f2f2 5%, #C7C7C7 100% );
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f2f2f2', endColorstr='#C7C7C7');
-  background-color: #999999;
+  //background: -webkit-gradient( linear, left top, left bottom, color-stop(0.05, #f2f2f2), color-stop(1, #C7C7C7) );
+  //background: -moz-linear-gradient( center top, #f2f2f2 5%, #C7C7C7 100% );
+  //filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#f2f2f2', endColorstr='#C7C7C7');
+  background-color: #f9f9f9;
   color: #000;
   font-size: 15px;
   font-weight: bold;
-  border-left: 1px solid #A8A8A8;
+  border-left: 1px solid #eaeaea;
 }
 
 table thead th:first-child {
