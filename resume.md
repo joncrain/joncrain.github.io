@@ -126,7 +126,7 @@ as it has allowed me to broaden my skills to areas that I do not do in my full t
 | macOS                    | Microsoft Office     | Bash        | munki/AutoPkg    | Azure            |
 | macOS Server             | Adobe Creative Cloud | Python      | Puppet           | Office 365       |
 | Windows 7 - 10           | VMWare Fusion        | PHP         | DeployStudio     | G Suite          |
-| Windows Server 2008 - 2016 | Slack                | SQL         | SCCM             | Nginx            |
+| Windows Server           | Slack                | SQL         | SCCM             | Nginx            |
 | VMWare ESXi              |                      | Git         | Chocolatey       |                  |
 | Debian/Ubuntu            |                      | Django      | OpManager        |                  |
 
