@@ -4,7 +4,7 @@ title: resume
 permalink: /resume/
 ---
 
-> if you're looking for something ~~shorter~~ more professional, try [this]({{ site.url }}/assets/resume.pdf)
+> if you're looking for something ~~shorter~~ more professional, try [this]({{ site.url }}/assets/Resume.pdf)
 
 ![workspace]({{ site.url }}/assets/workspace.jpg)
 
