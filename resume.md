@@ -29,9 +29,9 @@ Python/Django.
 - developed tools for the interfacing of various campus information systems
 - automated the deployment of Windows and Linux virtual machines
 - developed a testing/development server plan to replicate production environments
-- [Accidental] DBA for small set of Oracle, PostgreSQL and MSSQL Servers
-- Managed 500+ macOS computers
-- Helped coordinate and train team of ~15 student workers
+- [accidental] DBA for small set of Oracle, PostgreSQL and MSSQL Servers
+- managed 500+ macOS computers
+- helped coordinate and train team of student workers
 
 #### **Coordinator of the Center for Creative Media, CMU**
 
@@ -46,14 +46,14 @@ which point they wanted to keep me on, but could only fit a part time role into 
 
 - assisted with IT work orders assigned to the School of Music (CCFA Technician)
 - performed yearly configuration, installation, and maintenance of 120+ computers in four labs, classrooms, staff and faculty offices
-- yearly planning and setup of 15 – 30 new computers
-- assisted server planning, administration, and migration of Mac OS X Servers
 - provided one to one technical support for Faculty and students via Apple Remote Desktop and face to face interactions
 - created databases for royalty tracking for White Pine Music, the Wheatland Music Archive, School of Music highlights database, and School of Music website database backend
 - completely redesigned of the School of Music website to allow for database integration with events, locker and key sign outs, AJAX integration, and other database driven pages (music.cmich.edu)
 - designed and implemented major update of the White Pine Music website including custom PHP shopping cart implementation and improvements to allow easy updates of content via FileMaker
 
 <!-- - worked with the Faculty Center for Innovative Teaching in creating a custom database solution for their work orders and reporting
+- assisted server planning, administration, and migration of Mac OS X Servers
+- yearly planning and setup of 15 – 30 new computers
 - assisted in project development of White Pine Music potential CD releases
 - design for White Pine Music releases including CD covers, posters, and web advertising -->
 
@@ -127,7 +127,7 @@ as it has allowed me to broaden my skills to areas that I do not do in my full t
 | macOS Server             | Adobe Creative Cloud | Python      | Puppet           | Office 365       |
 | Windows 7 - 10           | VMWare Fusion        | PHP         | DeployStudio     | G Suite          |
 | Windows Server           | Slack                | SQL         | SCCM             | Nginx            |
-| VMWare ESXi              |                      | Git         | Chocolatey       |                  |
+| VMWare ESXi              | MunkiReport-PHP      | Git         | Chocolatey       |                  |
 | Debian/Ubuntu            |                      | Django      | OpManager        |                  |
 
 
