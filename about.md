@@ -64,4 +64,5 @@ my fixed gear or 29er on occasion as well.
 
 For over ten years of my life, I identified myself as a guitarist. While I still
 like to think I can play, I definitely don't have the time to put in it that I
-once had. Maybe someday I'll update what my current gear is.
+once had. Maybe someday I'll update what my current gear is. For now, I just wanted
+to use this picture of the guitars...
