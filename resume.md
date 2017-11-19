@@ -33,7 +33,7 @@ Python/Django.
 - developed a testing/development server plan to replicate production environments
 - [accidental] DBA for small set of Oracle, PostgreSQL and MSSQL Servers
 - managed 1200+ macOS computers
-- initiated/lead campus wide Mac users group which has developed intregral plans for Mac management
+- initiated/led campus wide Mac users group which has developed intregral plans for Mac management
 - helped coordinate and train team of student workers
 
 #### **Coordinator of the Center for Creative Media, CMU**
