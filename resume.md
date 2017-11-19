@@ -20,7 +20,9 @@ on many projects around the office and can spend time in specific areas as neede
 Working with a great team and more mature processes allowed me to develop my
 skills in lots of interesting areas. I have
 lately been working fairly closely on our client deployment and management processes
-and have revamped our use of Munki, AutoPkg, DeployStudio and puppet.
+and have revamped our use of Munki, AutoPkg, DeployStudio and puppet. I have been
+meeting with many other departments campus wide and have initiated plans for a 
+campus wide management solution.
 I have also been able to work with our team of developers who mainly work in
 Python/Django.
 
@@ -30,7 +32,8 @@ Python/Django.
 - automated the deployment of Windows and Linux virtual machines
 - developed a testing/development server plan to replicate production environments
 - [accidental] DBA for small set of Oracle, PostgreSQL and MSSQL Servers
-- managed 500+ macOS computers
+- managed 1200+ macOS computers
+- initiated/lead campus wide Mac users group which has developed intregral plans for Mac management
 - helped coordinate and train team of student workers
 
 #### **Coordinator of the Center for Creative Media, CMU**
