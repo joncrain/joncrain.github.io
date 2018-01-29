@@ -18,11 +18,12 @@ As an application administrator I am a jack of all trades. I am primarily
 responsible for our third party on site hosted applications, but I have my hands
 on many projects around the office and can spend time in specific areas as needed.
 Working with a great team and more mature processes allowed me to develop my
-skills in lots of interesting areas. I have
-lately been working fairly closely on our client deployment and management processes
-and have revamped our use of Munki, AutoPkg, DeployStudio and puppet. I have been
-meeting with many other departments campus wide and have initiated plans for a 
-campus wide management solution.
+skills in lots of interesting areas. Most recently, I have 
+been working on our client deployment and management of macOS
+and have revamped our use of Munki, AutoPkg, DeployStudio and puppet. It has been
+a great opportunity to work with many other departments campus wide to initiate 
+plans for a campus wide solution. We have had great success in streamlining our 
+processes and have some major plans for the continued growth of the macOS on campus.
 I have also been able to work with our team of developers who mainly work in
 Python/Django.
 
@@ -130,8 +131,8 @@ as it has allowed me to broaden my skills to areas that I do not do in my full t
 | macOS Server             | Adobe Creative Cloud | Python      | Puppet           | Office 365       |
 | Windows 7 - 10           | VMWare Fusion        | PHP         | DeployStudio     | G Suite          |
 | Windows Server           | Slack                | SQL         | SCCM             | Nginx            |
-| VMWare ESXi              | MunkiReport-PHP      | Git         | Chocolatey       | JMeter           |
-| Debian/Ubuntu            |                      | Django      | OpManager        |                  |
+| VMWare ESXi              | MunkiReport          | Git         | Chocolatey       | JMeter           |
+| Debian/Ubuntu            |                      | Django      | MicroMDM         |                  |
 
 
 ### **Certifications**
