@@ -3,7 +3,7 @@ layout: post
 title: Bootstrappr/Installr/Wrappr/Deployr
 ---
 
-I have been digging into Bootstrappr and Installr lately and have wanted to have a record of some of my interesting findings, so I decided to use it as an excuse to turn on the blog part of my site. And yeah, so in sticking with the missing vowel theme I have created a wrappr for them which I termed [deployr](https://github.com/joncrain/deployr) (subject to change...)
+I have been digging into Bootstrappr and Installr lately and have wanted to have a record of some of my interesting findings, so I decided to use it as an excuse to turn on the blog part of my site. In sticking with the missing vowel theme I have created a wrappr for them which I termed [deployr](https://github.com/joncrain/deployr).
 
 # Bootstrappr & Installr
 If you're reading this, you probably have heard of [Bootstrappr](https://github.com/munki/bootstrappr) and [Installr](https://github.com/munki/installr) before. If you have not, just go read [Greg's article on Bootstrappr](https://managingosx.wordpress.com/2018/01/17/bootstrappr/) for a basic understanding of what it's used for. Installr is similar but simply uses the macOS installer's built in `startosinstall` command to start an install from the command line. 
