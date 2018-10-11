@@ -10,10 +10,10 @@ permalink: /about/
 
 ## Coaching
 
-I have coached in the soccer program at [Mount Pleasant High School](http://mtpleasantschools.net//site/Default.aspx?PageID=1723) 
+I have coached for the soccer program at [Mount Pleasant High School](http://mtpleasantschools.net//site/Default.aspx?PageID=1723) 
 since 2007. I started out as an assistant, but quickly became the junior varsity head coach where
 I worked with the boys program for eight seasons and the girls program for five.
-In 2015, I stepped into the head coaching role for the boys varsity team.
+In 2015, I stepped into the head coaching role for the boys varsity team. I have also recently picked up one of the [Mount Pleasant Soccer Clubs](http://mpsoccerclub.org) U10 teams.
 
 Coaching gives me the opportunity to stretch my life in areas that I may not naturally
 look to grow. In my day job I sit at a computer for over 8 hours a day. Coaching
@@ -71,3 +71,11 @@ once had. Current gear:
 * Godin Multiac ACS-SA
 * Monoprice 15W Tube Amp
 * Blackstar ID:Core Stereo 10
+* Fender Twin Reverb '65 Reissue
+
+Current FX Chain
+* Volume pedal (one output to polytune)
+* Ibanex TS9
+* Electro Harmonix Soul Food
+* TC Electronics Flashback x4
+* TC Electronics Hall of Fame Reverb

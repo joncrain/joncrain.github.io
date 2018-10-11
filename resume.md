@@ -16,15 +16,15 @@ permalink: /resume/
 
 As an application administrator I am a jack of all trades. I am primarily
 responsible for our third party on site hosted applications, but I have my hands
-on many projects around the office and can spend time in specific areas as needed.
-Working with a great team and more mature processes allowed me to develop my
-skills in lots of interesting areas. Most recently, I have 
-been working on our client deployment and management of macOS
-and have revamped our use of Munki, AutoPkg, DeployStudio and puppet. It has been
-a great opportunity to work with many other departments campus wide to initiate 
-plans for a campus wide solution. We have had great success in streamlining our 
-processes and have some major plans for the continued growth of the macOS on campus.
-I have also been able to work with our team of developers who mainly work in
+on many projects around the office and can spend time in specific areas as
+needed. Working with a great team and more mature processes allowed me to
+develop my skills in lots of interesting areas. Most recently, I have  been
+working on our client deployment and management of macOS and have revamped our
+use of Munki, AutoPkg, DeployStudio and puppet. It has been a great opportunity
+to work with many other departments campus wide to initiate plans for a campus
+wide solution. We have had great success in streamlining our processes and have
+some major plans for the continued growth of the macOS on campus. I have also
+been able to work with our team of developers who mainly work in
 Python/Django.
 
 - planned and coordinated application upgrades with external vendors
@@ -33,20 +33,22 @@ Python/Django.
 - automated the deployment of Windows and Linux virtual machines
 - developed a testing/development server plan to replicate production environments
 - [accidental] DBA for small set of Oracle, PostgreSQL and MSSQL Servers
-- managed 1200+ macOS computers
+- managed 1500+ macOS computers using Autopkg/Munki/MicroMDM
 - initiated/led campus wide Mac users group which has developed intregral plans for Mac management
+- developed the transition plan to DEP/MDM workflow
 - helped coordinate and train team of student workers
 
 #### **Coordinator of the Center for Creative Media, CMU**
 
 ##### **March 2006 – December 2011**
 
-The coordinator position was a grant funded role that was created to aid in starting the
-recording label White Pine Music. While I did record and
-mix from time to time, my primary role was to alleviate some of the IT challenges that
-were put on the Audio Production Manager at the School of Music. Together, we managed around
-120 Mac computers for Faculty/Staff and labs. The position was funded for three years at
-which point they wanted to keep me on, but could only fit a part time role into the budget.
+The coordinator position was a grant funded role that was created to aid in
+starting the recording label White Pine Music. While I did record and mix from
+time to time, my primary role was to alleviate some of the IT challenges that
+were put on the Audio Production Manager at the School of Music. Together, we
+managed around 120 Mac computers for Faculty/Staff and labs. The position was
+funded for three years at which point they wanted to keep me on, but could only
+fit a part time role into the budget.
 
 - assisted with IT work orders assigned to the School of Music (CCFA Technician)
 - performed yearly configuration, installation, and maintenance of 120+ computers in four labs, classrooms, staff and faculty offices
@@ -85,12 +87,13 @@ found many new challenges day after day.
 
 ##### **May 2003 – February 2006**
 
-This was my first taste of an IT role. My primary role was in production, but because of
-limited resources, I put a lot of time into learning how to manage computers. We had
-a network of around 20 to 30 Macs and I can still remember the debates on transitioning
-from OS9 to Mac OSX (which if you don't remember, was not real great until 10.3 or so).
-I have fond memories of many late night working with many great friends here a lot of
-whom got there professional career path altered or tweaked while serving in this church.
+This was my first taste of an IT role. My primary role was in production, but
+because of limited resources, I put a lot of time into learning how to manage
+computers. We had a network of around 20 to 30 Macs and I can still remember the
+debates on transitioning from OS9 to Mac OSX (which if you don't remember, was
+not real great until 10.3 or so). I have fond memories of many late night
+working with many great friends here a lot of whom got there professional career
+path altered or tweaked while serving in this church.
 
 - purchased, installed, and maintained Windows Server 2003, Mac OS X Server, VoIP telephone system, and other network and production related equipment including sound systems, lighting fixtures, and staging.
 - created inventory system for computers and software, which included tagging system and online repair requests
@@ -110,12 +113,14 @@ whom got there professional career path altered or tweaked while serving in this
 
 ##### **January 2010 - Present**
 
-I was fortunate to take over work with the Sportsplex from a friend of mine who was moving out of the
-area in 2010. The Sportsplex has grown to include Morey Courts, the MP ICE Arena and McLaren Fitness.
-I have been able to consolidate a lot of the backend of their technologies and have provisioned
-many great technical resources that are available to nonprofits for their use (Azure for Nonprofits, AdWord Grants,
-G Suite for Nonprofits, Slack, Github, etc.). This has been a win-win
-as it has allowed me to broaden my skills to areas that I do not do in my full time role.
+I was fortunate to take over work with the Sportsplex from a friend of mine who
+was moving out of the area in 2010. The Sportsplex has grown to include Morey
+Courts, the MP ICE Arena and McLaren Fitness. I have been able to consolidate a
+lot of the backend of their technologies and have provisioned many great
+technical resources that are available to nonprofits for their use (Azure for
+Nonprofits, AdWord Grants, G Suite for Nonprofits, Slack, Github, etc.). This
+has been a win-win as it has allowed me to broaden my skills to areas that I do
+not do in my full time role.
 
 - G Suite administrator
 - Managed/developed [moreycourts.com](http://www.moreycourts.com), [mpicearena.org](http://www.mpicearena.org), [isabellasportsplex.com](http://www.isabellasportsplex.com)
@@ -125,14 +130,14 @@ as it has allowed me to broaden my skills to areas that I do not do in my full t
 
 ### **Technologies**
 
-| OS/Hypervisors           | Software             | Programming | Management Tools | Web Technologies |
-|--------------------------|----------------------|-------------|------------------|------------------|
-| macOS                    | Microsoft Office     | Bash        | munki/AutoPkg    | Azure            |
-| macOS Server             | Adobe Creative Cloud | Python      | Puppet           | Office 365       |
-| Windows 7 - 10           | VMWare Fusion        | PHP         | DeployStudio     | G Suite          |
-| Windows Server           | Slack                | SQL         | SCCM             | Nginx            |
-| VMWare ESXi              | MunkiReport          | Git         | Chocolatey       | JMeter           |
-| Debian/Ubuntu            |                      | Django      | MicroMDM         |                  |
+| OS/Hypervisors | Software             | Programming | Management Tools | Web Technologies |
+|:---------------|:---------------------|:------------|:-----------------|:-----------------|
+| macOS          | Microsoft Office     | Bash        | Munki/AutoPkg    | Azure            |
+| macOS Server   | Adobe Creative Cloud | Python      | Puppet           | Office 365       |
+| Windows 7 - 10 | VMWare Fusion        | PHP         | DeployStudio     | G Suite          |
+| Windows Server | Slack                | SQL         | SCCM             | Nginx            |
+| VMWare ESXi    | MunkiReport          | Git         | Chocolatey       | JMeter           |
+| Debian/Ubuntu  |                      | Django      | MicroMDM         |                  |
 
 
 ### **Certifications**
