@@ -46,7 +46,7 @@ I'm still trying to grasp the timing of the installation and what that means for
 
 I've also added a install_check_script (yes, lots of other ways to do this) to make sure it only installs if it acutally needs it. 
 
-### Update
+#### Small Update
 I believe the main issue with the install timing is due to the fact that jq was not in the path when running the preinstall_script. Solved it by adding `PATH=$PATH:/usr/local/bin` to the `env` file.
 
 [Complete pkginfo file](https://gist.github.com/joncrain/a307d6ca5de4668d950e656080a75d1f)
