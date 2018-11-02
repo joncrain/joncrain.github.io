@@ -35,12 +35,19 @@ export MICROMDM_ENV_PATH="/var/root/env"
 /usr/local/micromdm/api/remove_profile $udid "org.domain.kextpolicy"
 ```
 ## Prereqs
-For a quick deployment of the MicroMDM API, I simply created a package and deployed the commands to `/usr/local/micromdm/api`, jq to `/usr/local/bin` and the env file that includes the connection details for the API to `/var/root/env`.
+* Have the machine enrolled in MicroMDM.
+
+* For a quick deployment of the MicroMDM API, I simply created a package and deployed the commands to `/usr/local/micromdm/api`, jq to `/usr/local/bin` and the env file that includes the connection details for the API to `/var/root/env`.
 
 >[details on the API setup](https://github.com/micromdm/micromdm/tree/master/tools/api#setup)
 
 ## Issues
 I'm still trying to grasp the timing of the installation and what that means for munki throwing errors. In my limited tests, the profile doesn't seem to trigger the install when a user is not actively on the console. I'll be doing further troubleshooting and will update when more info is available.
+
+I've also added a install_check_script (yes, lots of other ways to do this) to make sure it only installs if it acutally needs it. 
+
+### Update
+I believe the main issue with the install timing is due to the fact that jq was not in the path when running the preinstall_script. Solved it by adding `PATH=$PATH:/usr/local/bin` to the `env` file.
 
 [Complete pkginfo file](https://gist.github.com/joncrain/a307d6ca5de4668d950e656080a75d1f)
 
