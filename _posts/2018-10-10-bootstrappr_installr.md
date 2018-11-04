@@ -18,18 +18,18 @@ Naming pre-Installr is a chicken/egg problem. You don't have the OS installed un
 > caveat - doesn't it make more sense just to have munki or your management solution name the machine something based on serial or MAC address? The answer is yes, yes it does. However, I work in education on a team of around 10 other desktop administrators, and as much as I've tried, I've been unable to convince them of this fact. But, if you can name the machine later, just do it that way.
 
 As a part of our bash script then, we need to ask the tech some questions and get some answers to store in variables. For example:
-```
+```sh
 echo -e "What is the tag number of this machine?"
 read TAG
 ```
 We can also pull some info about the machine, but again be careful as `system_profiler` is another thing that is unavailable!
-```
+```sh
 SERIAL=$(ioreg -c IOPlatformExpertDevice -d 2 | awk -F\" '/IOPlatformSerialNumber/{print $(NF-1)}')
 ```
 # Building a Custom Package within Recovery Mode
 No problem. But what do we have to work with? Well, recovery mode has `pkgutil`, but that only makes flat packages. `productbuild` is what we need, but is not found in Recovery. So we need to add that to our dmg. We also would need `pkgbuild` as well, but instead we can just use an already created and expanded package so we can simply edit the postinstall script, flatten and then build with `productbuild` like so:
 
-```
+```sh
 #### Create package for installr
 create_installr_package () {
 	mkdir -p "/Volumes/packages"
@@ -56,7 +56,7 @@ EOL
 Since we want to ask for the same information regardless if we're running Bootstrappr or Installr and since they are very similar, let's combine them, so we only have one package directory to maintain.
 
 You will want your variables and your volume selector for either workflow, so those questions, ask up front. And then we can ask for what type of workflow. 
-```
+```sh
 Select your workflow
 1) Bootstrap machine with preinstalled OS. Will install and configure munki.
 2) Install High Sierra and bootstrap munki.
@@ -66,7 +66,7 @@ Select your workflow
 
 
 Another great thing I was able to add, (er, take away?) was the hassle of including the entire macOS Installer in the dmg whenever I wanted to change something small in Installr. I simply created another dmg for High Sierra and another for Mojave that the script simply calls.
-```
+```sh
 DMG_LOCATION="http://macbootstrap/"
 INSTALLER = mojave
 /usr/bin/hdiutil attach "$DMG_LOCATION/$INSTALLER.dmg";
@@ -74,7 +74,7 @@ INSTALLER = mojave
 Once I did that, it was much easier to test the scripts.
 
 I then borrowed someones option menu and went to work with some options. One of the defaults looks something like this:
-```
+```sh
     2 ) echo "You picked $opt";
 	OS=highsierra
 	create_installr_package "$TAG" "$LOCATION" "$INVENTORY" "$SELECTEDDEPARTMENT" "$HOSTNAME"
