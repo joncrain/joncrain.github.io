@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Munki + MicroMDM = MunkiMDM?
+categories: macOS MicroMDM Munki
 ---
 
 One of things that I have been thinking about lately is the bare minimum required of an MDM. I have been fairly successful in putting most configuration tasks into Munki, but there is still the issue of UAMDM required profiles. I would hate to stand up a completely independent system with user groups and departments just to install a few profiles (and yes, maybe a lot more than this in the future). I have been thinking about MicroMDM for over a year now and I think I have finally found a way to make it doable by relying on our current manifest groups and logic in Munki. 

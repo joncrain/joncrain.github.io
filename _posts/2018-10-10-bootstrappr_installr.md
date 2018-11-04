@@ -1,6 +1,7 @@
 ---
 layout: post
 title: Bootstrappr/Installr/Wrappr/Deployr
+categories: macOS
 ---
 
 I have been digging into Bootstrappr and Installr lately and have wanted to have a record of some of my interesting findings, so I decided to use it as an excuse to turn on the blog part of my site. In sticking with the missing vowel theme I have created a wrappr for them which I termed [deployr](https://github.com/joncrain/deployr).
@@ -83,7 +84,8 @@ I then borrowed someones option menu and went to work with some options. One of 
 With functions to create the custom naming package and Installr, it makes it pretty simple to add new OS's.
 
 I've alse written a webhook to MS Teams for our internal deployr, but because it uses [relocatable-python](https://github.com/gregneagle/relocatable-python) it is not for the faint of heart, because again, using https with `curl` is not allowed and why would python be in Recovery Mode? It is pretty awesome though and I threw some links straight to MunkiReport and MunkiWebAdmin in the post. I may have another post just on that.
-![teams-webhook]({{ site.url }}/assets/teams.png)
+
+![teams-webhook]({{ site.url }}/images/teams.png){:height="70%" width="70%"}
 
 # Other Helpful Hints
 You need the computer booted on Recovery Mode 10.13+ (?), so not every machine will have the proper recovery mode to use these techniques. Apple has a support doc on [Recovery Mode](https://support.apple.com/en-us/HT204904) that supposedly says "Option-⌘-R" will "Upgrade to the latest macOS compatible with your Mac." which I would think means would internet recovery to 10.13.6 at least, but it didn't work for my mid 2011 iMacs. Luckily I still have an old DeployStudio netboot server sitting around! And what better use for it, than to boot old machines up to a 10.13 image to use Installr on!
