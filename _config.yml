@@ -20,6 +20,7 @@ feed_icon: rss
 email: "joncrain@gmail.com"
 plugins: [jekyll-paginate]
 paginate_path: "/page/:num/"
+permalink: "/:year/:month/:day/:title:output_ext"
 paginate: 5
 google_analytics: UA-91221948-1
 remote_theme: joncrain/strata-jekyll
