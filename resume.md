@@ -1,16 +1,12 @@
 ---
-layout: page
+layout: default
 title: resume
 permalink: /resume/
 ---
 
-> if you're looking for something ~~shorter~~ more professional, try [this]({{ site.url }}/assets/Resume.pdf)
+## **Professional Experience**
 
-![workspace]({{ site.url }}/assets/workspace.jpg)
-
-### **Professional Experience**
-
-#### **Application Administrator, Central Michigan University**
+### **Application Administrator, Central Michigan University**
 
 ##### **December 2011 – Present**
 
@@ -38,7 +34,7 @@ Python/Django.
 - developed the transition plan to DEP/MDM workflow
 - helped coordinate and train team of student workers
 
-#### **Coordinator of the Center for Creative Media, CMU**
+### **Coordinator of the Center for Creative Media, CMU**
 
 ##### **March 2006 – December 2011**
 
@@ -63,7 +59,7 @@ fit a part time role into the budget.
 - assisted in project development of White Pine Music potential CD releases
 - design for White Pine Music releases including CD covers, posters, and web advertising -->
 
-#### **Assistant Manager – Technical Services, CMU**
+### **Assistant Manager – Technical Services, CMU**
 
 ##### **October 2009 – December 2011**
 
@@ -83,7 +79,7 @@ found many new challenges day after day.
 <!-- - maintained the connect.cmich.edu website
 - provided database support for the Telecom area -->
 
-#### **IT/Production Director, Grace Church – Mount Pleasant, MI**
+### **IT/Production Director, Grace Church – Mount Pleasant, MI**
 
 ##### **May 2003 – February 2006**
 
@@ -107,9 +103,9 @@ path altered or tweaked while serving in this church.
 - managed a team of three volunteer designers and developed campaigns for Grace Church weekend services and special events
 - created newspaper ads, large format displays, flyers, invitation cards, and banners for use in promotion -->
 
-### **Freelance Work**
+## **Freelance Work**
 
-#### **Computer Support, Isabella Community Sportsplex - Mount Pleasant, MI**
+### **Computer Support, Isabella Community Sportsplex - Mount Pleasant, MI**
 
 ##### **January 2010 - Present**
 
@@ -128,7 +124,7 @@ not do in my full time role.
 - Setup/managed Meraki Systems Manager MDM
 
 
-### **Technologies**
+## **Technologies**
 
 | OS/Hypervisors | Software             | Programming | Management Tools | Web Technologies |
 |:---------------|:---------------------|:------------|:-----------------|:-----------------|
@@ -140,22 +136,24 @@ not do in my full time role.
 | Debian/Ubuntu  |                      | Django      | MicroMDM         |                  |
 
 
-### **Certifications**
+## **Certifications**
 
-#### **Linux Foundation Certified System Administrator**
+### **Linux Foundation Certified System Administrator**
 
 ##### **2016 - Present | [LFCS-1600-001164-0100](https://training.linuxfoundation.org/certification/verify-linux-certifications)**
 
-#### **Apple Certified Macintosh Technician**
+### **Apple Certified Macintosh Technician**
 
 ##### **2009 - 2012**
 
 
-### **Education**
+## **Education**
 
-#### **Bachelor of Applied Arts, Central Michigan University**
+### **Bachelor of Applied Arts, Central Michigan University**
 
 ##### **1999 - 2003 | Graduated Magna Cum Laude**
 
 - Major: Entrepreneurship
 - Minor: Industrial Engineering Technology
+
+![workspace]({{ site.url }}/images/workspace.jpg)

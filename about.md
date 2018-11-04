@@ -1,10 +1,10 @@
 ---
-layout: page
+layout: default
 title: about
 permalink: /about/
 ---
 
-> a random assortment of interests.
+# About
 
 ![soccer]({{ site.url }}/assets/soccer.jpg)
 
