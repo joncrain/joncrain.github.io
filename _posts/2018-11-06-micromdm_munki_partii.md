@@ -9,11 +9,11 @@ In my [last post]({% post_url 2018-11-01-micromdm_munki %}), I discussed how to 
 ### But Why Again?
 The idea is to use Munki's logic for when a profile should be installed. All profiles originate from the same place, departments can target their own profiles to their own fleets as needed.
 
-# Basic Middleware!
+# Basic Middleware
 
-There are a couple of ways one can install a profile with MicroMDM. 
-1. Include in the [Blueprint](https://github.com/micromdm/micromdm/wiki/Quickstart#blueprints) which will install the profile at enrollment.
-2. Via the API InstallProfile command. The API command takes the UDID of the computer and the  base64 encoded profile as it's payload.
+There are a few ways one can install a profile with MicroMDM. 
+* Include in the [Blueprint](https://github.com/micromdm/micromdm/wiki/Quickstart#blueprints) which will install the profile at enrollment.
+* Via the API InstallProfile command. The API command takes the UDID of the computer and the base64 encoded profile as it's payload.
 
 We will obviously be focusing on the second option. To get this info back to the server, we'll create a simple `curl` command that will hold a little json data and will trigger a small Flask app on the server.
 
