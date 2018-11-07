@@ -7,18 +7,12 @@ categories: macOS MicroMDM Munki
 In my [last post]({% post_url 2018-11-01-micromdm_munki %}), I discussed how to use Munki to control UAMDM Profiles using the MicroMDM API. As a proof of concept, it works great, but it also stores the API key for MicroMDM on any machine it is pushed to. Not ideal to have someone grab this and lock your entire fleet!
 
 ### But Why Again?
-The idea is to use Munki's logic for when a profile should be installed. All profiles originate from the same place, departments can target their own profiles to their own fleets as needed.
+Once you enroll a client in MicroMDM and it gets the enrollment profiles, you need to send a command to the client for any other profiles you want to add. This middleware is simply creating that call. Along with that, the idea is to use Munki's logic for _when_ a profile should be installed. Instead of having some profiles come from munki and some from some other management tool, they all come from the same place.
 
-# Basic Middleware
+## What this means for the Client/Server
 
-There are a few ways one can install a profile with MicroMDM. 
-* Include in the [Blueprint](https://github.com/micromdm/micromdm/wiki/Quickstart#blueprints) which will install the profile at enrollment.
-* Via the API InstallProfile command. The API command takes the UDID of the computer and the base64 encoded profile as it's payload.
-
-We will obviously be focusing on the second option. To get this info back to the server, we'll create a simple `curl` command that will hold a little json data and will trigger a small Flask app on the server.
-
-## Client Side
-Our preinstall check changes to:
+### Client Side
+Our `preinstall_script` in our pkginfo file changes to:
 ```sh
 #!/bin/sh
 udid=$(ioreg -d2 -c IOPlatformExpertDevice | awk -F\" '/IOPlatformUUID/{print $(NF-1)}')
@@ -34,7 +28,7 @@ curl --header "Content-Type: application/json" \
  https://micromdm-api.techops.cmich.edu/remove_profile/$udid
 ```
 
-## Server Side
+### Server Side
 
 With a little help from [@grahamgilbert](https://twitter.com/grahamgilbert) and a few others, I put this script together:
 ```py
@@ -91,3 +85,5 @@ settings = {
 }
 ```
 There are a ton of ways to run the flask app, but since I'm already running MunkiWebAdmin on this server using nginx and gunicorn, I did it that way. This involves setting up a virtualenv for the flask app, a new nginx site, and a new systemd to start up the app. 
+
+In part III I'll discuss adding more commands and adding in some basic authentication for the middleware.
