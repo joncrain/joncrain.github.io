@@ -6,6 +6,8 @@ categories: macOS MicroMDM Munki
 
 In my [last post]({% post_url 2018-11-01-micromdm_munki %}), I discussed how to use Munki to control UAMDM Profiles using the MicroMDM API. As a proof of concept, it works great, but it also stores the API key for MicroMDM on any machine it is pushed to. Not ideal to have someone grab this and lock your entire fleet!
 
+Also check out [Part III]({% post_url 2018-11-08-micromdm_munki_partiii %})!
+
 ### But Why Again?
 Once you enroll a client in MicroMDM and it gets the enrollment profiles, you need to send a command to the client for any other profiles you want to add. This middleware is simply creating that call. Along with that, the idea is to use Munki's logic for _when_ a profile should be installed. Instead of having some profiles come from munki and some from some other management tool, they all come from the same place.
 
