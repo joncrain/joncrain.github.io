@@ -132,7 +132,7 @@ def api(command):
         profile = ('/path_to/munki_repo/pkgs/profiles/%s' % content['profile'])
         with open(profile, "rb") as f:
             bytes = f.read()
-            payload['profile'] = base64.b64encode(bytes).decode('ascii')
+            payload['Payload'] = base64.b64encode(bytes).decode('ascii')
     requests.post(
         '{}/v1/commands'.format(settings.get('micromdm_url')),
         auth=('micromdm', settings.get('micromdm_key')),
