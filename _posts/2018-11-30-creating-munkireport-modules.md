@@ -4,7 +4,7 @@ title: Creating Munkireport v3 Modules Part 1
 categories: macOS munkireport
 ---
 
-Recent changes with munkireport have decoupled the modules from the core of the munkireport project. Many thanks to Arjen van Bochoven (@bochoven) for all the hard work in bringing this to reality. I seemed to have pick an interesting time to learn how to create modules and I wanted to share some things I've learned along the way. Also big thanks to John Eberle (@tuxudo) and Zack McCauley (@zack_mccauley) for their help and patience getting me this far.
+Recent changes with munkireport have decoupled the modules from the core of the munkireport project. Many thanks to Arjen van Bochoven (@bochoven) for all the hard work in bringing this to reality. I've seemed to pick an interesting time to learn how to create modules and I wanted to share some things I've learned along the way. Also big thanks to John Eberle (@tuxudo) and Zack McCauley (@zack_mccauley) for their help and patience getting me this far.
 
 # Setup a Dev Environment
 
