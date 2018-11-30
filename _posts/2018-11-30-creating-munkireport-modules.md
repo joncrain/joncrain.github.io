@@ -73,8 +73,7 @@ echo "MODULE_SEARCH_PATHS=$(pwd)" >> ../.env
 ##### this will make sure that the module is loaded
 echo "MODULES='$module_name'" >> ../.env
 ```
-Once you restart the server (`php -S localhost:8080 -t $dev_site_root/public
-`), your new module should be available at [http://localhost:8080/index.php?/show/listing/awesome/awesome](http://localhost:8080/index.php?/show/listing/awesome/awesome)!
+Your new module should be available at [http://localhost:8080/index.php?/show/listing/awesome/awesome](http://localhost:8080/index.php?/show/listing/awesome/awesome)!
 
 ![new-module]({{ site.url }}/images/new-module.png){:height="70%" width="70%"}
 
