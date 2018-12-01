@@ -9,7 +9,10 @@ Recent changes with munkireport have decoupled the modules from the core of the 
 # Setup a Dev Environment
 
 Coming into this process, I thought this would be a tough thing to get started. Turns out it's not! 
-There is one small prereq, you need to get `composer` installed locally, which is an exercise that will be left up to the reader. [Install Composer](https://getcomposer.org/download/) will get you started. _(the installer assumes you have things like `wget` installed, and it's recommend to install with `brew`, so it just depends on your current dev env)_
+There are a couple small prereqs: 
+* you need munki installed locally (if you want to enroll your machine to test)
+* you need to get `composer` installed locally, which is an exercise that will be left up to the reader. [Install Composer](https://getcomposer.org/download/) will get you started. _(the installer assumes you have things like `wget` installed, and it's recommend to install with `brew`, so it just depends on your current dev env)_
+
 Once composer is installed and working, this script will get munkireport running for you:
 
 ```sh
