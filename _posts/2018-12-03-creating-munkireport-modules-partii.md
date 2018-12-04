@@ -6,7 +6,7 @@ categories: macOS MunkiReport
 
 In [part I](2018-11-30-creating-munkireport-modules) we made an awesome module. Or we made the framework for an awesome module. Or really we got ourselves ready to make an awesome module with the awesome built in MunkiReport tools. In this article, we deep dive into the module itself.
 
-# Anatomy of a Module
+# Module Structure
 
 ## File Structure
 
@@ -74,7 +74,7 @@ The model file does the work of pulling the data out of the database.
 
 There is more magic behind this file, but for now we'll say it's just `json` data of the module name, description and license.
 
-# Module as a Dependency
+# Module Deployment
 
 For years, modules have been included into the core of MunkiReport. It has lowered the bar for admins to simply install and have things work, but it has slowed development of both the core and modules as the complexity and pace of development has risen. Adding custom modules has always been possible, but decoupling modules from the core truly allows us to have a supported workflow for adding and updating modules outside of the MunkiReport repo.
 
