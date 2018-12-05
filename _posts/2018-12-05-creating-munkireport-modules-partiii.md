@@ -4,8 +4,8 @@ title: Creating MunkiReport v3 Modules Part 3
 categories: macOS MunkiReport
 ---
 
-[Part 1](% post_url 2018-11-30-creating-munkireport-modules}) Getting Started
-[Part 2](% post_url 2018-12-03-creating-munkireport-modules-partii}) Module Structure
+[Part 1]({% post_url 2018-11-30-creating-munkireport-modules %}) Getting Started
+[Part 2]({% post_url 2018-12-03-creating-munkireport-modules-partii %}) Module Structure
 
 # Module Deployment Process
 
