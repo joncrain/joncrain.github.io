@@ -4,7 +4,7 @@ title: Creating MunkiReport v3 Modules Part 2
 categories: macOS MunkiReport
 ---
 
-In [part I](2018-11-30-creating-munkireport-modules) we made an awesome module. Or we made the framework for an awesome module. Or really we got ourselves ready to make an awesome module with the awesome built in MunkiReport tools. In this article, we deep dive into the module itself.
+In [part I](% post_url 2018-11-30-creating-munkireport-modules}) we made an awesome module. Or we made the framework for an awesome module. Or really we got ourselves ready to make an awesome module with the awesome built in MunkiReport tools. In this article, we deep dive into the module itself.
 
 # Module Structure
 
