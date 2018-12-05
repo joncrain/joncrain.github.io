@@ -74,11 +74,13 @@ The model file does the work of pulling the data out of the database.
 
 There is more magic behind this file, but for now we'll say it's just `json` data of the module name, description and license.
 
-# Module Deployment
+# Module Deployment Process
 
 For years, modules have been included into the core of MunkiReport. It has lowered the bar for admins to simply install and have things work, but it has slowed development of both the core and modules as the complexity and pace of development has risen. Adding custom modules has always been possible, but decoupling modules from the core truly allows us to have a supported workflow for adding and updating modules outside of the MunkiReport repo.
 
-The dependency utilizes [Composer](https://getcomposer.org), [GitHub](https://github.com), and [Packagist](https://packagist.org).
+_The process outlined below may not be for everyone. It is not a prereq to creating your own modules. Some may find in useful in certain situations, but it is by no means necessary!_
+
+The process utilizes [Composer](https://getcomposer.org), [GitHub](https://github.com), and [Packagist](https://packagist.org).
 
 ## Composer
 
