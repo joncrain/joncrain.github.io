@@ -63,7 +63,7 @@ To our namespace:
 "name": "joncrain/awesome",
 ```
 
-Once you check again, you may get a warning that your pacakge has a similar name to another package, and if you're ok with that just continue. It will do more magic and you will see this:
+Once you check again, you may get a warning that your package has a similar name to another package, and if you're ok with that just continue. It will do more magic and you will see this:
 
 ![packagist]({{ site.url }}/images/packagist.png){:height="100%" width="100%"}
 
