@@ -58,7 +58,7 @@ There are a number of different types of views, and a module can have as many or
 
 * listing - will show up under the Listings heading
 * report - will show up under the Reports heading
-* admin - will show up under the Admin heading
+* admin - will show up under the Admin heading (not quite available at this time, but will be coming soon!)
 * tab - will show up as a new tab under the client view
 * widget - creates a widget that can be used on the dashboard or report page
 
