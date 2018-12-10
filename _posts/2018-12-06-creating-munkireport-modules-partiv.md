@@ -99,7 +99,7 @@ fi
 mkdir -p "${CACHEDIR}"
 
 # Business logic goes here
-osqueryi --json 'SELECT * FROM launchd WHERE name NOT LIKE "com.apple%" ORDER BY name' > ./awesome.json
+osqueryi --json 'SELECT * FROM launchd WHERE name NOT LIKE "com.apple%" ORDER BY name' > $OUTPUT_FILE
 ```
 
 It does not need to be bash either. Theoretically, it's possible to do this in `python` if you prefer:  
@@ -134,7 +134,7 @@ def main():
 
     # Issues queries and call osquery Thrift APIs.
     RESULTS = instance.client.query(query_cmd)
-    with open('awesome.json', 'w') as outfile:
+    with open(cachedir . 'awesome.json', 'w') as outfile:
         json.dump(RESULTS.response, outfile, indent=4)
 
 if __name__ == "__main__":
