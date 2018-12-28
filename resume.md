@@ -29,8 +29,8 @@ Python/Django.
 - automated the deployment of Windows and Linux virtual machines
 - developed a testing/development server plan to replicate production environments
 - [accidental] DBA for small set of Oracle, PostgreSQL and MSSQL Servers
-- managed 1500+ macOS computers using Autopkg/Munki/MicroMDM
-- initiated/led campus wide Mac users group which has developed intregral plans for Mac management
+- managed 1500+ macOS computers using AutoPkg/Munki/MicroMDM
+- initiated/led campus wide Mac users group which has developed integral plans for Mac management
 - developed the transition plan to DEP/MDM workflow
 - helped coordinate and train team of student workers
 
@@ -127,20 +127,18 @@ not do in my full time role.
 ## **Technologies**
 
 | OS/Hypervisors | Software             | Programming | Management Tools | Web Technologies |
-|:---------------|:---------------------|:------------|:-----------------|:-----------------|
+|----------------|----------------------|-------------|------------------|------------------|
 | macOS          | Microsoft Office     | Bash        | Munki/AutoPkg    | Azure            |
-| macOS Server   | Adobe Creative Cloud | Python      | Puppet           | Office 365       |
-| Windows 7 - 10 | VMWare Fusion        | PHP         | DeployStudio     | G Suite          |
-| Windows Server | Slack                | SQL         | SCCM             | Nginx            |
-| VMWare ESXi    | MunkiReport          | Git         | Chocolatey       | JMeter           |
-| Debian/Ubuntu  |                      | Django      | MicroMDM         |                  |
-
+| Debian/Ubuntu  | Adobe Creative Cloud | Python      | Puppet           | Office 365       |
+| Windows 7 - 10 | VMWare Fusion        | PHP         | MicroMDM         | G Suite          |
+| Windows Server |                      | SQL         | SCCM             |                  |
+| VMWare ESXi    |                      | Django      | Chocolatey       |                  |
 
 ## **Certifications**
 
 ### **Linux Foundation Certified System Administrator**
 
-##### **2016 - Present | [LFCS-1600-001164-0100](https://training.linuxfoundation.org/certification/verify-linux-certifications)**
+##### **2016 - 2018 | [LFCS-1600-001164-0100](https://training.linuxfoundation.org/certification/verify-linux-certifications)**
 
 ### **Apple Certified Macintosh Technician**
 
@@ -151,7 +149,7 @@ not do in my full time role.
 
 ### **Bachelor of Applied Arts, Central Michigan University**
 
-##### **1999 - 2003 | Graduated Magna Cum Laude**
+##### **1999 - 2003 | Honors: _magna cum laude_**
 
 - Major: Entrepreneurship
 - Minor: Industrial Engineering Technology
