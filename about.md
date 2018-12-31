@@ -29,8 +29,7 @@ coach, but I enjoy the challenge in this non technical area of my life.
 ## Photography
 
 For a number of years I owned a DSLR with an ever increasing number of lenses and
-accessories. In the past few years I've simplified to becoming an iPhone photographer. I try to keep a DayOne journal of a photo
-everyday with varied success. I hope to share that one day with everyone, but I
+accessories. In the past few years I've simplified to becoming an iPhone photographer. I try to keep a DayOne journal of a photo everyday with varied success. I hope to share that one day with everyone, but I
 haven't quite got around to it and it's really not that good yet.
 
 I am a bit of a hack with photography (like a lot of other areas), but I do have a small claim to
@@ -40,10 +39,6 @@ handful from the concert hall and sent them on the way. They loved the photos
 and ended up putting them on the [front cover]({{ site.url }}/assets/cover.jpg)
 and in a [full page]({{ site.url }}/assets/page1.jpg)
 [spread]({{ site.url }}/assets/page2.jpg).
-
-All the photos on this site were taken be me on various iPhones
-with the notable exception of the home page, which was actually taken by my talented
-wife with some old Canon camera.
 
 ---
 
