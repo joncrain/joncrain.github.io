@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Creating MunkiReport v3 Modules Part 1
+title: Creating MunkiReport Modules Part 1
 categories: macOS MunkiReport
 ---
 
@@ -30,7 +30,7 @@ git checkout wip
 
 git pull
 
-echo '<?php' > config.php
+# echo '<?php' > config.php # needed for < v4
 echo 'AUTH_METHODS="NOAUTH"' > .env
 
 composer install --no-dev --no-suggest --optimize-autoloader
@@ -89,3 +89,10 @@ Your new module should be available at [http://localhost:8080/index.php?/show/li
 ![new-module]({{ site.url }}/images/new-module.png){:height="70%" width="70%"}
 
 From here, take a look at [How to create a module](https://github.com/munkireport/munkireport-php/wiki/How-to-create-a-module) and [How to create a module (advanced)](https://github.com/munkireport/munkireport-php/wiki/How-to-create-a-module-%28advanced%29) and other wiki articles on how to get the data that you want. I will dig into this part a little more in upcoming articles.
+
+## More in this Series
+
+* [Part 1]({% post_url 2018-11-30-creating-munkireport-modules %}) Getting Started
+* [Part 2]({% post_url 2018-12-03-creating-munkireport-modules-partii %}) Module Structure
+* [Part 3]({% post_url 2018-12-05-creating-munkireport-modules-partiii %}) Module Deployment
+* [Part 4]({% post_url 2018-12-06-creating-munkireport-modules-partiv %}) Gathering the Data

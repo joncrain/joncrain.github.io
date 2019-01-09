@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Creating MunkiReport v3 Modules Part 3
+title: Creating MunkiReport Modules Part 3
 categories: macOS MunkiReport
 ---
 
@@ -72,3 +72,10 @@ Once we add our release to Packagist we are able to require our module by runnin
 ```sh
 COMPOSER=composer.local.json composer require joncrain/awesome:^1.0
 ```
+
+## More in this Series
+
+* [Part 1]({% post_url 2018-11-30-creating-munkireport-modules %}) Getting Started
+* [Part 2]({% post_url 2018-12-03-creating-munkireport-modules-partii %}) Module Structure
+* [Part 3]({% post_url 2018-12-05-creating-munkireport-modules-partiii %}) Module Deployment
+* [Part 4]({% post_url 2018-12-06-creating-munkireport-modules-partiv %}) Gathering the Data

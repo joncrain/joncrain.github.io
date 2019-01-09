@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Creating MunkiReport v3 Modules Part 2
+title: Creating MunkiReport Modules Part 2
 categories: macOS MunkiReport
 ---
 
@@ -73,3 +73,10 @@ The model file does the work of pulling the data out of the database.
 ### `composer.json`
 
 There is more magic behind this file, but for now we'll say it's just `json` data of the module name, description and license.
+
+## More in this Series
+
+* [Part 1]({% post_url 2018-11-30-creating-munkireport-modules %}) Getting Started
+* [Part 2]({% post_url 2018-12-03-creating-munkireport-modules-partii %}) Module Structure
+* [Part 3]({% post_url 2018-12-05-creating-munkireport-modules-partiii %}) Module Deployment
+* [Part 4]({% post_url 2018-12-06-creating-munkireport-modules-partiv %}) Gathering the Data
