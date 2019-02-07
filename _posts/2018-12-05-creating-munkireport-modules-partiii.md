@@ -39,6 +39,10 @@ git remote add origin https://github.com/joncrain/awesome.git
 git push -u origin master
 ```
 
+Many users will be able to stop here. You can add commits to your module and when it is needed simply clone or download the files.
+
+# Packagist Deployment
+
 _You will probably want to bookmark this next part until the module is more complete and ready for deployment, but feel free to read as an overview of the process. The following process is not required to make your own module, but can be helpful in understanding the current deployment process of MunkiReport modules._
 
 Once the module is functional we will create a release for this module:
