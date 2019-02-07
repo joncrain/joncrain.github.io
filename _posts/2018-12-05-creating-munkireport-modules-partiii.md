@@ -25,19 +25,21 @@ We don't really have to worry about this at the moment. MunkiReport uses it in t
 
 ## GitHub
 
-First of all, if you don't have an account, go make one. Modules are now separated into their own [dedicated repo](https://github.com/new). Simple enough to do:
+First of all, if you don't have an account, go [make one](https://github.com/join). Modules are now separated into their own [dedicated repo](https://github.com/new). Simple enough to do:
 
 ![new-repo]({{ site.url }}/images/new-repo.png){:height="100%" width="100%"}
 
-Create the repository sans readme and license and then run:
+Create the repository sans readme and license and from your `custom_modules/awesome` directory run:
 
 ```sh
 git init
 git add .
 git commit -m "First commit"
-git remote add origin https://github.com/IsabellaCommunitySportsplex/awesome.git
+git remote add origin https://github.com/joncrain/awesome.git
 git push -u origin master
 ```
+
+_You will probably want to bookmark this next part until the module is more complete and ready for deployment, but feel free to read as an overview of the process. The following process is not required to make your own module, but can be helpful in understanding the current deployment process of MunkiReport modules._
 
 Once the module is functional we will create a release for this module:
 
@@ -79,3 +81,4 @@ COMPOSER=composer.local.json composer require joncrain/awesome:^1.0
 * [Part 2]({% post_url 2018-12-03-creating-munkireport-modules-partii %}) Module Structure
 * [Part 3]({% post_url 2018-12-05-creating-munkireport-modules-partiii %}) Module Deployment
 * [Part 4]({% post_url 2018-12-06-creating-munkireport-modules-partiv %}) Gathering the Data
+* [Part 5]({% post_url 2019-01-28-creating-munkireport-modules-partv %}) Processing the Data
