@@ -42,7 +42,7 @@ I had a few years of Spanish in high school mixed with a semester of French in c
 
 ### Migrations
 
-MunkiReport relies on the [Laraval Migrations Framework](https://laravel.com/docs/5.6/migrations) to manage database table creation and updating. We will look a creating the migration in [Part 5]({% post_url 2018-01-28-creating-munkireport-modules-partv %}).
+MunkiReport relies on the [Laraval Migrations Framework](https://laravel.com/docs/5.6/migrations) to manage database table creation and updating. We will look a creating the migration in [Part 5]({% post_url 2019-01-28-creating-munkireport-modules-partv %}).
 
 ### Scripts
 
