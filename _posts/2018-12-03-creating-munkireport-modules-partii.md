@@ -57,12 +57,15 @@ These define how the module is deployed to the client, and how exactly the clien
 There are a number of different types of views, and a module can have as many or as little as you want! By default a listing, report, and widget are created by the `addmodule.sh` script. (The following list shows generally what they are used for, but the actual file that controls where they are defined is the `provides.php` file.)
 
 * listing - will show up under the Listings heading
-  ![listings]({{ site.url }}/images/listings.png){:height="70%" width="70%"}
+  
+  ![listings]({{ site.url }}/images/listings.png){:height="50%" width="50%"}
 * report - will show up under the Reports heading
-  ![reports]({{ site.url }}/images/reports.png){:height="70%" width="70%"}
+  
+  ![reports]({{ site.url }}/images/reports.png){:height="50%" width="50%"}
 * admin - will show up under the Admin heading (not quite available at this time, but will be coming soon!)
 * tab - will show up as a new tab under the client view
-  ![tab]({{ site.url }}/images/tab.png){:height="70%" width="70%"}
+  
+  ![tab]({{ site.url }}/images/tab.png){:height="25%" width="25%"}
 * widget - creates a widget that can be used on the dashboard or report page
 
 ### `awesome_controller.php`
