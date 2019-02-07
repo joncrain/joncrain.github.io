@@ -39,7 +39,7 @@ composer install --no-dev --no-suggest --optimize-autoloader
 php database/migrate.php
 # can someone fix the bluetooth module so we don't need this again?
 php database/migrate.php
-php -S localhost:8080 -t $dev_site_root/public
+php -S localhost:8080 -t public
 ```
 
 ![munkireport]({{ site.url }}/images/munkireport.png){:height="70%" width="70%"}
@@ -80,15 +80,15 @@ cd custom_modules
 echo "MODULE_SEARCH_PATHS=$(pwd)" >> ../.env
 ##### the actual script
 ../build/addmodule.sh $module_name
-##### this will make sure that the module is loaded
-echo "MODULES='$module_name'" >> ../.env
+##### this will make sure that the new module and all default modules are loaded
+echo "MODULES='$module_name,munkireport,managedinstalls,disk_report'" >> ../.env
 ```
 
 Your new module should be available at [http://localhost:8080/index.php?/show/listing/awesome/awesome](http://localhost:8080/index.php?/show/listing/awesome/awesome)!
 
 ![new-module]({{ site.url }}/images/new-module.png){:height="70%" width="70%"}
 
-From here, take a look at [How to create a module](https://github.com/munkireport/munkireport-php/wiki/How-to-create-a-module) and [How to create a module (advanced)](https://github.com/munkireport/munkireport-php/wiki/How-to-create-a-module-%28advanced%29) and other wiki articles on how to get the data that you want. I will dig into this part a little more in upcoming articles.
+I went ahead and combined the setup and new module scripts into a [gist](https://gist.github.com/joncrain/43cfb62d1559a1a5e69720271c93231a).
 
 ## More in this Series
 
