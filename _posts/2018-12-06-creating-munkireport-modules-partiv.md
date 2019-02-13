@@ -225,3 +225,4 @@ If none of this makes sense, take a look at the scripts in other modules. The mo
 * [Part 2]({% post_url 2018-12-03-creating-munkireport-modules-partii %}) Module Structure
 * [Part 3]({% post_url 2018-12-05-creating-munkireport-modules-partiii %}) Module Deployment
 * [Part 4]({% post_url 2018-12-06-creating-munkireport-modules-partiv %}) Gathering the Data
+* [Part 5]({% post_url 2019-01-28-creating-munkireport-modules-partv %}) Processing the Data
