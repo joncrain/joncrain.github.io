@@ -151,7 +151,7 @@ function __construct($serial='')
 The process function will vary a bit more based on what kind of data is sent in the postflight. The basic concept is that you need to read the data in, replace (or write more data) and save it back to the table.
 
 ```php
-function process($data)
+function process($json)
 {
     // Check if data was uploaded
     if (! $json ) {
