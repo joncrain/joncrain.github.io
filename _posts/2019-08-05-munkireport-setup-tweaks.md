@@ -44,7 +44,7 @@ ln -s /usr/local/munkireport/composer.local.json /usr/local/munkireport-config/c
 
 As of MunkiReport 4.0, the configuration has moved from `config.php` to `.env` and a `local` directory. The `local` directory contains things like certs, users, dashboards, module_configs, etc.
 
-By default this simply lives in the MunkiReport root directory. However, we can configure this directory location by the `LOCAL_DIRECTORY_PATH` within our `.env` file. This way we do not need a symlink and still keep our configuration out of the root.
+By default this simply lives in the MunkiReport root directory. However, we can configure this directory location by the `LOCAL_DIRECTORY_PATH` within our `.env` file. This way we do not need a symlink, but can still keep our configuration out of the root.
 
 Copy `/usr/local/munkireport/local/` to `/usr/local/munkireport-config/local/` and then edit `.env` to contain this line:
 
