@@ -23,9 +23,10 @@ awesome
     ├── install.sh
     └── uninstall.sh
 └── views
-    ├── awesome_listing.php
-    ├── awesome_report.php
-    └── awesome_widget.php
+    ├── awesome_listing.yml
+    ├── awesome_report.yml
+    ├── awesome_tab.php
+    └── awesome_widget.yml
 ├── awesome_controller.php
 ├── awesome_model.php
 ├── awesome_processor.php
