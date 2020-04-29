@@ -17,7 +17,7 @@ awesome
 └──locales
     └── en.json
 └── migrations
-    └── 2018_12_04_234243_awesome_init.php
+    └── 2020_04_04_234243_awesome_init.php
 └── scripts
     ├── awesome.sh
     ├── install.sh
@@ -28,8 +28,9 @@ awesome
     └── awesome_widget.php
 ├── awesome_controller.php
 ├── awesome_model.php
+├── awesome_processor.php
 ├── composer.json
-└── provides.php
+└── provides.yml
 ```
 
 This is an awesome looking module.
@@ -54,7 +55,7 @@ These define how the module is deployed to the client, and how exactly the clien
 
 ### Views
 
-There are a number of different types of views, and a module can have as many or as little as you want! By default a listing, report, and widget are created by the `addmodule.sh` script. (The following list shows generally what they are used for, but the actual file that controls where they are defined is the `provides.php` file.)
+There are a number of different types of views, and a module can have as many or as little as you want! By default a listing, report, and widget are created by the `addmodule.sh` script. (The following list shows generally what they are used for, but the actual file that controls where they are defined is the `provides.yml` file.)
 
 * listing - will show up under the Listings heading
   
@@ -76,6 +77,10 @@ The controller file defines how the data is parsed out of the database into a fo
 
 The model file does the work of pulling the data out of the database.
 
+### `awesome_processor.php`
+
+The processor file helps in ingesting the data that the client is sending into the database.
+
 ### `composer.json`
 
 There is more magic behind this file, but for now we'll say it's just `json` data of the module name, description and license.
@@ -87,3 +92,4 @@ There is more magic behind this file, but for now we'll say it's just `json` dat
 * [Part 3]({% post_url 2018-12-05-creating-munkireport-modules-partiii %}) Module Deployment
 * [Part 4]({% post_url 2018-12-06-creating-munkireport-modules-partiv %}) Gathering the Data
 * [Part 5]({% post_url 2019-01-28-creating-munkireport-modules-partv %}) Processing the Data
+* [Part 6]({% post_url 2019-08-24-creating-munkireport-modules-partvi %}) Presenting the Data - Listing

@@ -26,18 +26,18 @@ class AwesomeInit extends Migration
         $capsule::schema()->create('awesome', function (Blueprint $table) {
             $table->increments('id');
             $table->string('serial_number')->unique();
-            $table->string('example_string');
-            $table->integer('example_integer');
+            $table->string('item1');
+            $table->integer('item2');
 
-            $table->index('example_string');
-            $table->index('example_integer');
+            $table->index('item1');
+            $table->index('item2');
         });
     }
 
     public function down()
     {
         $capsule = new Capsule();
-        $capsule::schema()->dropIfExists('default');
+        $capsule::schema()->dropIfExists('awesome');
     }
 }
 ```
@@ -86,19 +86,21 @@ Now let's turn our attention toward the model and take a look at the file that w
 
 ```php
 <?php
-class awesome_model extends \Model {
 
-    protected $restricted;
+use munkireport\models\MRModel as Eloquent;
 
-    function __construct($serial='')
-    {
-        ...
-    }
+class awesome_model extends Eloquent
+{
+    protected $table = 'awesome';
 
-    function process($data)
-    {
-        ...
-    }
+    protected $fillable = [
+      'serial_number',
+      'item1',
+      'item2',
+    ];
+
+    public $timestamps = false;
+
 }
 ```
 
@@ -107,78 +109,73 @@ class awesome_model extends \Model {
 The first thing this file does is extends the `Model` class by creating the `awesome_model` class. We will change the lowercase `a` to uppercase `A` to follow the [PSR-0 Style Guide](https://github.com/php-fig/fig-standards/blob/master/accepted/PSR-1-basic-coding-standard.md#1-overview). There is no style police for the project, but we want the code to look similar, so be polite and check out other modules or simply ask.
 
 ```php
-class Awesome_model extends \Model {
+class Awesome_model extends Eloquent
 ```
 
-#### Constructor Function
+#### Defining Models
 
-By default, the template gave us two functions. Let's look at each of these as well. The first is a [php constructor](http://php.net/manual/en/language.oop5.decon.php). Constructor's allow you to give an objects' properties values. The template has got us started, but we need to fill in a few gaps. For now, we know that we will have a new table called `awesome` with a primary key of `id`. Then when each machine checks in, it's record is created based on the serial number. I believe these first two fields will be in most modules. After that, we fill in the data from the json data that we will be importing, which we have already listed in our migration. Default values can be created by entering a value after the data instead of an empty string.
+MunkiReport has recently changed to the [Eloquent](https://laravel.com/docs/7.x/eloquent#eloquent-model-conventions) model. In this model a table is defined with `protected $table = 'awesome';` which has been created for us. After that, the `$fillable` array tells us what items in the table can be mass-assigned.
 
 ```php
-function __construct($serial='')
-{
-    parent::__construct('id', 'awesome'); //primary key, tablename
-    $this->rs['id'] = '';
-    $this->rs['serial_number'] = $serial;
-    $this->rs['disabled'] = '';
-    $this->rs['groupname'] = '';
-    $this->rs['inetd_compatibility'] = '';
-    $this->rs['keep_alive'] = '';
-    $this->rs['label'] = '';
-    $this->rs['name'] = '';
-    $this->rs['on_demand'] = '';
-    $this->rs['path'] = '';
-    $this->rs['process_type'] = '';
-    $this->rs['program'] = '';
-    $this->rs['program_arguments'] = '';
-    $this->rs['queue_directories'] = '';
-    $this->rs['root_directory'] = '';
-    $this->rs['run_at_load'] = '';
-    $this->rs['start_interval'] = '';
-    $this->rs['start_on_mount'] = '';
-    $this->rs['stderr_path'] = '';
-    $this->rs['stdout_path'] = '';
-    $this->rs['username'] = '';
-    $this->rs['watch_paths'] = '';
-    $this->rs['working_directory'] = '';
+    protected $fillable = [
+      'serial_number',
+      'disabled',
+      'groupname',
+      'inetd_compatibility',
+      'keep_alive',
+      'label',
+      'name',
+      'on_demand',
+      'path',
+      'process_type',
+      'program',
+      'program_arguments',
+      'queue_directories',
+      'root_directory',
+      'run_at_load',
+      'start_interval',
+      'start_on_mount',
+      'stderr_path',
+      'stdout_path',
+      'username',
+      'watch_paths',
+      'working_directory',
+    ];
 
-    $this->serial = $serial;
+    public $timestamps = false;
 }
 ```
 
-#### Process Function
+## Processor
 
-The process function will vary a bit more based on what kind of data is sent in the postflight. The basic concept is that you need to read the data in, replace (or write more data) and save it back to the table.
+The processor will vary a bit more based on what kind of data is sent in the postflight. The basic concept is that you need to read the data in, replace (or write more data) and save it back to the table.
 
 ```php
-function process($json)
+<?php
+
+use munkireport\processors\Processor;
+
+class Awesome_processor extends Processor
 {
-    // Check if data was uploaded
-    if (! $json ) {
-        print_r("Error processing manifests module: No JSON file found");
-    } else {
+    public function run($data)
+    {
+        $modelData = ['serial_number' => $this->serial_number];
 
-        // Delete previous set
-        $this->deleteWhere('serial_number=?', $this->serial_number);
+		// Parse data
+        $sep = ' = ';
+		foreach(explode(PHP_EOL, $data) as $line) {
+            if($line){
+                list($key, $val) = explode($sep, $line);
+                $modelData[$key] = $val;
+            }
+		} //end foreach explode lines
 
-        // Process json into object thingy
-        $data = json_decode($json, true);
-
-        // Copy default values
-        $empty = $this->rs;
-
-        foreach ($data as $key => $value) {
-            // Reset values
-            $this->rs = $empty;
-
-            // traversing the json!
-            $this->$key = $value;
-
-            // save the data
-            $this->id = '';
-            $this->save();  
-        }
-    }
+        awesome_model::updateOrCreate(
+            ['serial_number' => $this->serial_number], $modelData
+        );
+        
+        return $this;
+    }   
 }
 ```
 
@@ -188,14 +185,14 @@ You may run into issue with trying to get the correct data in the correct place.
 
 ### Go back to the source
 
-You are processing the data from the file we created in `/usr/local/munki/preflight.d/cache/` so make sure that the data is there to begin with. 
+You are processing the data from the file we created in `/usr/local/munkireport/scripts/cache/` so make sure that the data is there to begin with. 
 
 ### Caching
 
 Remember that MunkiReport [caches the data](https://github.com/munkireport/munkireport-php/wiki/How-to-create-a-module#caching) and only sends if the data has changed. If you make changes and want to try sending again, the hash of the file must change, so be sure to alter the data (manually if needed) and then run the following command to send it:
 
 ```bash
-sudo /usr/local/munki/postflight
+sudo /usr/local/munkireport/munkireport-runner
 ```
 
 ### Debugging
@@ -216,3 +213,5 @@ There is a lot of information here and it's as much for me as it is for everyone
 * [Part 2]({% post_url 2018-12-03-creating-munkireport-modules-partii %}) Module Structure
 * [Part 3]({% post_url 2018-12-05-creating-munkireport-modules-partiii %}) Module Deployment
 * [Part 4]({% post_url 2018-12-06-creating-munkireport-modules-partiv %}) Gathering the Data
+* *[Part 5]({% post_url 2019-01-28-creating-munkireport-modules-partv %}) Processing the Data*
+* [Part 6]({% post_url 2019-08-24-creating-munkireport-modules-partvi %}) Presenting the Data - Listing

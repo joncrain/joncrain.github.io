@@ -86,3 +86,4 @@ COMPOSER=composer.local.json composer require joncrain/awesome:^1.0
 * [Part 3]({% post_url 2018-12-05-creating-munkireport-modules-partiii %}) Module Deployment
 * [Part 4]({% post_url 2018-12-06-creating-munkireport-modules-partiv %}) Gathering the Data
 * [Part 5]({% post_url 2019-01-28-creating-munkireport-modules-partv %}) Processing the Data
+* [Part 6]({% post_url 2019-08-24-creating-munkireport-modules-partvi %}) Presenting the Data - Listing
