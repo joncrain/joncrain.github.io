@@ -92,7 +92,7 @@ I went ahead and combined the setup and new module scripts into a [gist](https:/
 
 ## More in this Series
 
-* [Part 1]({% post_url 2018-11-30-creating-munkireport-modules %}) Getting Started
+* *[Part 1]({% post_url 2018-11-30-creating-munkireport-modules %}) Getting Started*
 * [Part 2]({% post_url 2018-12-03-creating-munkireport-modules-partii %}) Module Structure
 * [Part 3]({% post_url 2018-12-05-creating-munkireport-modules-partiii %}) Module Deployment
 * [Part 4]({% post_url 2018-12-06-creating-munkireport-modules-partiv %}) Gathering the Data
