@@ -60,12 +60,6 @@ CACHEDIR="$CWD/cache/"
 OUTPUT_FILE="${CACHEDIR}awesome.txt"
 SEPARATOR=' = '
 
-# Skip manual check
-if [ "$1" = 'manualcheck' ]; then
-	echo 'Manual check: skipping'
-	exit 0
-fi
-
 # Create cache dir if it does not exist
 mkdir -p "${CACHEDIR}"
 
@@ -84,12 +78,6 @@ So most of this is boilerplate code, and the built in comments tell you most of 
 CWD=$(dirname $0)
 CACHEDIR="$CWD/cache/"
 OUTPUT_FILE="${CACHEDIR}awesome.json" # changed from .txt!
-
-# Skip manual check
-if [ "$1" = 'manualcheck' ]; then
-	echo 'Manual check: skipping'
-	exit 0
-fi
 
 # Create cache dir if it does not exist
 mkdir -p "${CACHEDIR}"
