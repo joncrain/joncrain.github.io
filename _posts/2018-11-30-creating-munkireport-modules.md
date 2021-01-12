@@ -24,8 +24,8 @@ git clone https://github.com/munkireport/munkireport-php.git $dev_site_root
 cd $dev_site_root
 
 #### Choose the branch to load:
-# git checkout master
-git checkout wip
+git checkout main
+# git checkout wip
 # git checkout tags/v3.2.6
 
 git pull
@@ -33,12 +33,13 @@ git pull
 # echo '<?php' > config.php # needed for < v4
 echo 'AUTH_METHODS="NOAUTH"' > .env
 
-composer install --no-dev --no-suggest --optimize-autoloader
-# composer update --no-dev
-# composer dumpautoload --optimize --no-dev
-php database/migrate.php
-# can someone fix the bluetooth module so we don't need this again?
-php database/migrate.php
+# Install dependencies (and modules!)
+composer install --no-dev --no-suggest
+
+# Run Migrations!
+./please migrate
+
+# Start the Webserver!
 php -S localhost:8080 -t public
 ```
 
@@ -59,6 +60,8 @@ I keep a script like this ready on my computer and make updates as needed to get
 ![vs-code]({{ site.url }}/images/vs-code.png){:height="80%" width="80%"}
 
 # Create a Module from the Module Template
+
+_There is now a `please` command for building a module. Simply run `please make:module` and most of the work is done! Feel free to read through these articles to better understand the inner workings of modules._
 
 There is a (not well publicized) script for building modules located in the `build` directory. To utilize the script you need to:
 
