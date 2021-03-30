@@ -31,13 +31,13 @@ Once it's in a separate directory, it is much easier to source control.
 Move your `.env` file to `/usr/local/munkireport-config/.env` and then create a symlink back to the MunkiReport root.
 
 ```bash
-ln -s /usr/local/munkireport/.env /usr/local/munkireport-config/.env
+ln -s /usr/local/munkireport-config/.env /usr/local/munkireport/.env
 ```
 
 Not everyone is in need of `composer.local.json`, but if you are installing other modules with composer, you probably should be using it. Move it to your config directory as well.
 
 ```bash
-ln -s /usr/local/munkireport/composer.local.json /usr/local/munkireport-config/composer.local.json
+ln -s /usr/local/munkireport-config/composer.local.json /usr/local/munkireport/composer.local.json
 ```
 
 ## Copy Your Local Folder and Store with Your Configuration
