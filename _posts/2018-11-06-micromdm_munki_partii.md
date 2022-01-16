@@ -86,6 +86,6 @@ settings = {
     'micromdm_key': 'sample-mdm-token-here',
 }
 ```
-There are a ton of ways to run the flask app, but since I'm already running MunkiWebAdmin on this server using nginx and gunicorn, I did it that way. This involves setting up a virtualenv for the flask app, a new nginx site, and a new systemd to start up the app. 
+There are a ton of ways to run the flask app, but since I'm already running MunkiWebAdmin on this server using nginx and gunicorn, I did it that way. This involves setting up a virtualenv for the flask app, a new nginx site, and a new systemd to start up the app.
 
 In part III I'll discuss adding more commands and adding in some basic authentication for the middleware.

@@ -86,7 +86,7 @@ mkdir -p "${CACHEDIR}"
 osqueryi --json 'SELECT * FROM launchd WHERE name NOT LIKE "com.apple%" ORDER BY name' > $OUTPUT_FILE
 ```
 
-It does not need to be bash either. Theoretically, it's possible to do this in `python` if you prefer:  
+It does not need to be bash either. Theoretically, it's possible to do this in `python` if you prefer:
 (I know, we're introducing more dependencies: [osquery-python](https://github.com/osquery/osquery-python)) ¯\\_(ツ)_/¯
 
 ```py
@@ -183,7 +183,7 @@ If you have followed [Part 1]({% post_url 2018-11-30-creating-munkireport-module
 echo "MODULES='$module_name'" >> ../.env
 ```
 
-You can double check this by either looking at your `.env` file or by checking for it's existence at http://localhost:8080/index.php?/install/dump_modules/env 
+You can double check this by either looking at your `.env` file or by checking for it's existence at http://localhost:8080/index.php?/install/dump_modules/env
 
 If you have it loaded and have saved your scripts if you now go to http://localhost:8080/index.php?/install you will see the script that is called when you [install or package the client](https://github.com/munkireport/munkireport-php/wiki/Client-setup#command-line-manual-install). In this script you should be able to search for the name of your module and see the `install.sh` script for it. If you instead see the `uninstall.sh` script, you probably have not loaded the module in your `.env`.
 
