@@ -15,7 +15,7 @@ All the available views are defined in the `provides.yml` file.
 ### Listing
 
 The listing will show up under the Listings heading
-  
+
   ![listings]({{ site.url }}/images/listings.png){:height="50%" width="50%"}
 
 As of MunkiReport 5.0, the listing itself has been modularized and we have a much simpler look to the `awesome_listing.yml` file.
@@ -99,7 +99,7 @@ Here is the view of our listing now!
 
 ![final_listing]({{ site.url }}/images/final_listing.png){:height="100%" width="100%"}
 
-There is a lot of power in the new listing format to easily create what your module will need. Arjen has done a great job of simplifying the format which allows for easy creation of the listing file. As always join us in the #munkireport channel in MacAdmins Slack to chat! 
+There is a lot of power in the new listing format to easily create what your module will need. Arjen has done a great job of simplifying the format which allows for easy creation of the listing file. As always join us in the #munkireport channel in MacAdmins Slack to chat!
 
 ## More in this Series
 

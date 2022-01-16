@@ -7,7 +7,7 @@ categories: macOS
 I have been digging into Bootstrappr and Installr lately and have wanted to have a record of some of my interesting findings, so I decided to use it as an excuse to turn on the blog part of my site. In sticking with the missing vowel theme I have created a wrappr for them which I termed [deployr](https://github.com/joncrain/deployr).
 
 # Bootstrappr & Installr
-If you're reading this, you probably have heard of [Bootstrappr](https://github.com/munki/bootstrappr) and [Installr](https://github.com/munki/installr) before. If you have not, just go read [Greg's article on Bootstrappr](https://managingosx.wordpress.com/2018/01/17/bootstrappr/) for a basic understanding of what it's used for. Installr is similar but simply uses the macOS installer's built in `startosinstall` command to start an install from the command line. 
+If you're reading this, you probably have heard of [Bootstrappr](https://github.com/munki/bootstrappr) and [Installr](https://github.com/munki/installr) before. If you have not, just go read [Greg's article on Bootstrappr](https://managingosx.wordpress.com/2018/01/17/bootstrappr/) for a basic understanding of what it's used for. Installr is similar but simply uses the macOS installer's built in `startosinstall` command to start an install from the command line.
 
 The more I used these tools, the more I thought it would be great to combine them into one. But it wasn't really until I decided that I wanted the ability to _**customize the name of a machine**_ as a part of the initial Installr script did I really start digging into a way to wrap them together. It was a fun little puzzle as the Recovery Mode brings in interesting level of restraint to what you can and can't do.
 
@@ -55,7 +55,7 @@ EOL
 
 Since we want to ask for the same information regardless if we're running Bootstrappr or Installr and since they are very similar, let's combine them, so we only have one package directory to maintain.
 
-You will want your variables and your volume selector for either workflow, so those questions, ask up front. And then we can ask for what type of workflow. 
+You will want your variables and your volume selector for either workflow, so those questions, ask up front. And then we can ask for what type of workflow.
 ```sh
 Select your workflow
 1) Bootstrap machine with preinstalled OS. Will install and configure munki.

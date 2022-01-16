@@ -37,10 +37,10 @@ Then for any command you wish to implement include `@basic_auth.required` decora
 
 ## Making the command a little more extensible
 
-The next thing I wanted too accomplish was to parameterize all the commands to make it easier to read and add more commands as needed. This was harder for me to grasp because I have not worked with Flask a whole lot, but in practice it's pretty simple. I went down a rabbit whole of trying to do metaprogramming with python, but luckily didn't find anything that worked. The solution is that this is already built into Flask, I was just using it in a ~~wrong~~ _different_ way. 
+The next thing I wanted too accomplish was to parameterize all the commands to make it easier to read and add more commands as needed. This was harder for me to grasp because I have not worked with Flask a whole lot, but in practice it's pretty simple. I went down a rabbit whole of trying to do metaprogramming with python, but luckily didn't find anything that worked. The solution is that this is already built into Flask, I was just using it in a ~~wrong~~ _different_ way.
 
 ### The `route()` Decorator
-Initially I was trying to stick the udid into the route, but this meant that I needed a static route defined for each command. When trying to parameterize, Flask would complain about multiple functions called the same thing. Since we can pass the `udid` with json, we can remove that from the Flask route. 
+Initially I was trying to stick the udid into the route, but this meant that I needed a static route defined for each command. When trying to parameterize, Flask would complain about multiple functions called the same thing. Since we can pass the `udid` with json, we can remove that from the Flask route.
 
 #### The Old Way
 ```py
@@ -61,7 +61,7 @@ def api(command):
 curl --header "Content-Type: application/json" --request POST --data '{"udid":"'$udid'"} http://localhost:5000/api/RestartDevice/
 ```
 
-Since MicroMDM supports all the commands listed in [Apple's MDM Protocol Reference Guide](https://developer.apple.com/enterprise/documentation/MDM-Protocol-Reference.pdf), this allows this simple Flask app to be fairly powerful. Maybe too powerful? 
+Since MicroMDM supports all the commands listed in [Apple's MDM Protocol Reference Guide](https://developer.apple.com/enterprise/documentation/MDM-Protocol-Reference.pdf), this allows this simple Flask app to be fairly powerful. Maybe too powerful?
 
 ## But not that extensible...
 
@@ -90,7 +90,7 @@ Most commands take more than just the `udid` and `request_type`. In order to acc
     check('udid')
     check('pin')                # For DeviceLock
     check('product_key')        # For ScheduleOSUpdate
-    check('install_action')     # For ScheduleOSUpdateScan    
+    check('install_action')     # For ScheduleOSUpdateScan
 ```
 There are many ways to loop this check, for now this works and is fairly readable/user friendly.
 

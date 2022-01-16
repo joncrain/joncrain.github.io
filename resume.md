@@ -6,22 +6,26 @@ permalink: /resume/
 
 ## **Professional Experience**
 
+### **Senior Client Platform Engineer, Unity**
+
+##### **October 2020 - Present**
+
 ### **Application Administrator, Central Michigan University**
 
-##### **December 2011 – Present**
+##### **December 2011 – October 2020**
 
-As an application administrator I am a jack of all trades. I am primarily
+<!-- As an application administrator I am a jack of all trades. I am primarily
 responsible for our third party on site hosted applications, but I have my hands
 on many projects around the office and can spend time in specific areas as
 needed. Working with a great team and more mature processes allowed me to
-develop my skills in lots of interesting areas. Most recently, I have  been
+develop my skills in lots of interesting areas. Most recently, I have been
 working on our client deployment and management of macOS and have revamped our
 use of Munki, AutoPkg, DeployStudio and puppet. It has been a great opportunity
 to work with many other departments campus wide to initiate plans for a campus
 wide solution. We have had great success in streamlining our processes and have
 some major plans for the continued growth of the macOS on campus. I have also
 been able to work with our team of developers who mainly work in
-Python/Django.
+Python/Django. -->
 
 - planned and coordinated application upgrades with external vendors
 - developed load testing plans for high volume mission critical servers
@@ -34,17 +38,17 @@ Python/Django.
 - developed the transition plan to DEP/MDM workflow
 - helped coordinate and train team of student workers
 
-### **Coordinator of the Center for Creative Media, CMU**
+### **Coordinator of the Center for Creative Media, Central Michigan University**
 
 ##### **March 2006 – December 2011**
 
-The coordinator position was a grant funded role that was created to aid in
+<!-- The coordinator position was a grant funded role that was created to aid in
 starting the recording label White Pine Music. While I did record and mix from
 time to time, my primary role was to alleviate some of the IT challenges that
 were put on the Audio Production Manager at the School of Music. Together, we
 managed around 120 Mac computers for Faculty/Staff and labs. The position was
 funded for three years at which point they wanted to keep me on, but could only
-fit a part time role into the budget.
+fit a part time role into the budget. -->
 
 - assisted with IT work orders assigned to the School of Music (CCFA Technician)
 - performed yearly configuration, installation, and maintenance of 120+ computers in four labs, classrooms, staff and faculty offices
@@ -59,15 +63,15 @@ fit a part time role into the budget.
 - assisted in project development of White Pine Music potential CD releases
 - design for White Pine Music releases including CD covers, posters, and web advertising -->
 
-### **Assistant Manager – Technical Services, CMU**
+### **Assistant Manager – Technical Services, Central Michigan University**
 
 ##### **October 2009 – December 2011**
 
-I started at Technical Services working half time because the cut of hours at the
+<!-- I started at Technical Services working half time because the cut of hours at the
 Center for Creative Media. Technical Services is the last line of support for many
 offices on campus and is the primary repair depot for the institution and students.
 I was able to hone a lot of problem solving skills while working in this role and
-found many new challenges day after day.
+found many new challenges day after day. -->
 
 - performed certified diagnosis and repairs on university owned and student Apple computers
 - provided on-site repair and troubleshooting for administrative staff computers and printers
@@ -77,7 +81,7 @@ found many new challenges day after day.
 - co-managed staff of student workers
 
 <!-- - maintained the connect.cmich.edu website
-- provided database support for the Telecom area -->
+- provided database support for the Telecom area
 
 ### **IT/Production Director, Grace Church – Mount Pleasant, MI**
 
@@ -123,11 +127,10 @@ not do in my full time role.
 - Setup Azure environment for backups, file sharing and servers
 - Setup/managed Meraki Systems Manager MDM
 
-
 ## **Technologies**
 
 | OS/Hypervisors | Software             | Programming | Management Tools | Web Technologies |
-|----------------|----------------------|-------------|------------------|------------------|
+| -------------- | -------------------- | ----------- | ---------------- | ---------------- |
 | macOS          | Microsoft Office     | Bash        | Munki/AutoPkg    | Azure            |
 | Debian/Ubuntu  | Adobe Creative Cloud | Python      | Puppet           | Office 365       |
 | Windows 7 - 10 | VMWare Fusion        | PHP         | MicroMDM         | G Suite          |
@@ -143,7 +146,6 @@ not do in my full time role.
 ### **Apple Certified Macintosh Technician**
 
 ##### **2009 - 2012**
-
 
 ## **Education**
 

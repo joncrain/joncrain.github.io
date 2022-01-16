@@ -4,7 +4,7 @@ title: Munki + MicroMDM = MunkiMDM?
 categories: macOS MicroMDM Munki
 ---
 
-### _Checkout out [Part II]({% post_url 2018-11-06-micromdm_munki_partii %}) for actual Middleware! And [Part III]({% post_url 2018-11-08-micromdm_munki_partiii %}) to really extend it!_ 
+### _Checkout out [Part II]({% post_url 2018-11-06-micromdm_munki_partii %}) for actual Middleware! And [Part III]({% post_url 2018-11-08-micromdm_munki_partiii %}) to really extend it!_
 
 One of things that I have been thinking about lately is the bare minimum required of an MDM. I have been fairly successful in putting most configuration tasks into Munki, but there is still the issue of UAMDM required profiles. I would hate to stand up a completely independent system with user groups and departments just to install a few profiles (and yes, maybe a lot more than this in the future). I have been thinking about MicroMDM for over a year now and I think I have finally found a way to make it doable by relying on our current manifest groups and logic in Munki. _This is just a proof of concept!_
 
@@ -47,7 +47,7 @@ export MICROMDM_ENV_PATH="/var/root/env"
 ## Issues
 I'm still trying to grasp the timing of the installation and what that means for munki throwing errors. In my limited tests, the profile doesn't seem to trigger the install when a user is not actively on the console. I'll be doing further troubleshooting and will update when more info is available.
 
-I've also added a install_check_script (yes, lots of other ways to do this) to make sure it only installs if it acutally needs it. 
+I've also added a install_check_script (yes, lots of other ways to do this) to make sure it only installs if it acutally needs it.
 
 #### Small Update
 I believe the main issue with the install timing is due to the fact that jq was not in the path when running the preinstall_script. Solved it by adding `PATH=$PATH:/usr/local/bin` to the `env` file.

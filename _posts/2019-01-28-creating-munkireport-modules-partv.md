@@ -42,11 +42,11 @@ class AwesomeInit extends Migration
 }
 ```
 
-Luckily, the file contains the majority of what we need for a successful migration. We just need to correct the names and types of data that we would like to have in our table. 
+Luckily, the file contains the majority of what we need for a successful migration. We just need to correct the names and types of data that we would like to have in our table.
 
-The first field is the `id` field which we can just leave alone. 
+The first field is the `id` field which we can just leave alone.
 
-The second is the `serial_number`, which is most likely going to be used to join different tables together. The decision must be made  whether there will be one record per machine, or if there will be many records for each machine. If you have many records, make sure to take out the unique constraint. In our example, we may have many launch daemons, so we need to remove it so that it is simply `$table->string('serial_number');`. 
+The second is the `serial_number`, which is most likely going to be used to join different tables together. The decision must be made  whether there will be one record per machine, or if there will be many records for each machine. If you have many records, make sure to take out the unique constraint. In our example, we may have many launch daemons, so we need to remove it so that it is simply `$table->string('serial_number');`.
 
 We then need to create the rest of our fields and assign them the proper type based on the values that will be stored in them.
 
@@ -173,9 +173,9 @@ class Awesome_processor extends Processor
         awesome_model::updateOrCreate(
             ['serial_number' => $this->serial_number], $modelData
         );
-        
+
         return $this;
-    }   
+    }
 }
 ```
 
@@ -185,7 +185,7 @@ You may run into issue with trying to get the correct data in the correct place.
 
 ### Go back to the source
 
-You are processing the data from the file we created in `/usr/local/munkireport/scripts/cache/` so make sure that the data is there to begin with. 
+You are processing the data from the file we created in `/usr/local/munkireport/scripts/cache/` so make sure that the data is there to begin with.
 
 ### Caching
 

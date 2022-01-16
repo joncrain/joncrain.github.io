@@ -8,9 +8,9 @@ permalink: /about/
 
 ![workspace]({{ site.url }}/images/workspace.jpg)
 
-My name is Jon Crain. I do a lot of work on Macs. 
+My name is Jon Crain. I do a lot of work on Macs.
 
-And by work, I mean like automating all the things for a mid-sized fleet of macOS machines. 
+And by work, I mean like automating all the things for a mid-sized fleet of macOS machines.
 
 And by things, I mean things like application deployments and package building. But it's more than that. There is a lot of planning, communication and thought that goes into it as well.
 
