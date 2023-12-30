@@ -8,14 +8,14 @@ sass:
   sass_dir: assets/sass
 url: https://joncra.in
 disqus_shortname: stratajekylldemo
-twitter_username: "niarcnoj"
+twitter_username:
 linkedin_username: "jon-crain"
-instagram_username: "joncrain"
+instagram_username:
 pinterest_username:
 flickr_username:
 github_username:  "joncrain"
 feed_icon: rss
-email: "joncrain@gmail.com"
+email: "joncrain@joncra.in"
 plugins: [jekyll-paginate]
 paginate_path: "/page/:num/"
 permalink: "/:year/:month/:day/:title:output_ext"
