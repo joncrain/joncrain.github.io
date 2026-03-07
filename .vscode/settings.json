@@ -1,3 +1,18 @@
 {
-    "python.linting.pylintEnabled": false
+	"css.customData": [],
+	"css.lint.unknownAtRules": "ignore",
+	"editor.defaultFormatter": "biomejs.biome",
+	"editor.formatOnSave": true,
+	"[css]": {
+		"editor.defaultFormatter": "biomejs.biome"
+	},
+	"[typescript]": {
+		"editor.defaultFormatter": "biomejs.biome"
+	},
+	"[typescriptreact]": {
+		"editor.defaultFormatter": "biomejs.biome"
+	},
+	"[json]": {
+		"editor.defaultFormatter": "biomejs.biome"
+	}
 }

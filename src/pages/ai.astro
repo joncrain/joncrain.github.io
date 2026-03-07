@@ -1,0 +1,23 @@
+---
+import BaseHead from "../components/BaseHead.astro";
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
+import AuroraStrip from "../components/react/AuroraStrip";
+import ChatUI from "../components/react/ChatUI";
+import { SITE_TITLE } from "../consts";
+---
+
+<html lang="en">
+  <head>
+    <BaseHead title={`About | ${SITE_TITLE}`} description="The story of Jon Crain — from Mac admin to client platform engineer, building tools that scale operations." />
+  </head>
+  <body class="bg-background text-foreground relative">
+    <Header />
+    <AuroraStrip client:load />
+
+    <main class="relative z-10 pt-28 pb-20 px-6">
+        <ChatUI client:load />
+    </main>
+    <Footer />
+  </body>
+</html>

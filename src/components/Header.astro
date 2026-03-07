@@ -1,0 +1,35 @@
+---
+import { SITE_TITLE } from "../consts";
+import SocialIcons from "./react/SocialIcons";
+
+const pathname = Astro.url.pathname;
+const isActive = (path: string) => pathname === path || pathname === `${path}/`;
+
+const links = [
+	{ href: "/about", label: "about" },
+	{ href: "/blog", label: "blog" },
+  { href: "/ai", label: "ai" },
+];
+---
+
+<header class="fixed top-0 left-0 right-0 z-50 backdrop-blur-md bg-background/80 border-b border-border">
+  <nav class="max-w-5xl mx-auto flex items-center justify-between px-6 py-4">
+    <a href="/" class="text-lg font-bold text-foreground hover:text-accent transition-colors">
+      {SITE_TITLE}
+    </a>
+    <div class="flex items-center gap-8">
+      {links.map(({ href, label }) => (
+        <a
+          href={href}
+          class:list={[
+            'text-sm font-semibold transition-colors',
+            isActive(href) ? 'text-accent-light' : 'text-muted-foreground hover:text-foreground',
+          ]}
+        >
+          {label}
+        </a>
+      ))}
+      <SocialIcons client:load />
+    </div>
+  </nav>
+</header>

@@ -1,0 +1,64 @@
+---
+import { getCollection } from "astro:content";
+import BaseHead from "../../components/BaseHead.astro";
+import Footer from "../../components/Footer.astro";
+import FormattedDate from "../../components/FormattedDate.astro";
+import Header from "../../components/Header.astro";
+import AuroraStrip from "../../components/react/AuroraStrip";
+import { SITE_DESCRIPTION, SITE_TITLE } from "../../consts";
+
+const posts = (await getCollection("blog", ({ data }) => !data.draft)).sort(
+	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
+);
+---
+
+<html lang="en">
+  <head>
+    <BaseHead title={`Blog | ${SITE_TITLE}`} description={SITE_DESCRIPTION} />
+  </head>
+  <body class="bg-background text-foreground relative">
+    <AuroraStrip client:load />
+    <Header />
+    <main class="relative z-10 pt-28 pb-20 px-6">
+      <div class="max-w-3xl mx-auto">
+        <h1 class="text-4xl font-bold mb-4">Blog</h1>
+        <p class="text-muted-foreground mb-12">
+          Writing about platform engineering, automation, macOS management, and building internal tools.
+        </p>
+
+        <div class="flex flex-col gap-6">
+          {posts.map((post) => (
+            <a
+              href={`/blog/${post.id}/`}
+              class="group p-6 rounded-xl bg-card border border-border hover:border-accent/50 transition-all"
+            >
+              <div class="flex flex-col gap-2">
+                <div class="flex items-center gap-3 text-sm text-muted-foreground">
+                  <FormattedDate date={post.data.pubDate} />
+                  {post.data.tags && (
+                    <div class="flex gap-2">
+                      {post.data.tags.slice(0, 3).map((tag: string) => (
+                        <span class="px-2 py-0.5 text-xs rounded-full bg-muted border border-border">
+                          {tag}
+                        </span>
+                      ))}
+                    </div>
+                  )}
+                </div>
+                <h2 class="text-xl font-semibold text-foreground group-hover:text-accent-light transition-colors">
+                  {post.data.title}
+                </h2>
+                {post.data.description && (
+                  <p class="text-muted-foreground text-sm line-clamp-2">
+                    {post.data.description}
+                  </p>
+                )}
+              </div>
+            </a>
+          ))}
+        </div>
+      </div>
+    </main>
+    <Footer />
+  </body>
+</html>

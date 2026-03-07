@@ -1,0 +1,22 @@
+---
+const year = new Date().getFullYear();
+---
+
+<footer class="border-t border-border bg-background/50 py-12 px-6">
+  <div class="max-w-5xl mx-auto flex flex-col items-center gap-6 md:flex-row md:justify-between">
+    <p class="text-sm text-muted-foreground">
+      &copy; {year} Jon Crain. All rights reserved.
+    </p>
+    <div class="flex items-center gap-6">
+      <a href="https://github.com/joncrain" target="_blank" rel="noopener" class="text-muted-foreground hover:text-foreground transition-colors text-sm">
+        GitHub
+      </a>
+      <a href="https://www.linkedin.com/in/jon-crain" target="_blank" rel="noopener" class="text-muted-foreground hover:text-foreground transition-colors text-sm">
+        LinkedIn
+      </a>
+      <a href="/rss.xml" class="text-muted-foreground hover:text-foreground transition-colors text-sm">
+        RSS
+      </a>
+    </div>
+  </div>
+</footer>

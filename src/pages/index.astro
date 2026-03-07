@@ -1,0 +1,71 @@
+---
+import BaseHead from "../components/BaseHead.astro";
+import Footer from "../components/Footer.astro";
+import Header from "../components/Header.astro";
+import AuroraBackground from "../components/react/AuroraBackground";
+import HeroContent from "../components/react/HeroContent";
+import TechLogoLoop from "../components/react/TechLogoLoop";
+import { SITE_DESCRIPTION, SITE_TITLE } from "../consts";
+---
+
+<html lang="en">
+  <head>
+    <BaseHead title={SITE_TITLE} description={SITE_DESCRIPTION} />
+  </head>
+  <body class="bg-background text-foreground">
+    <Header />
+
+    <section id="hero" class="relative min-h-screen flex items-center justify-center overflow-hidden">
+      <AuroraBackground
+        client:load
+        colorStops={['#5227FF', '#7cff67', '#5227FF']}
+        amplitude={0.5}
+        blend={0.8}
+        speed={0.5}
+      />
+
+      <HeroContent client:load />
+    </section>
+
+    <section class="py-24 px-6 border-t border-border">
+      <div class="max-w-5xl mx-auto">
+        <h2 class="text-sm font-medium text-muted-foreground uppercase tracking-widest text-center mb-12">
+          Technologies I Work With
+        </h2>
+        <TechLogoLoop client:visible />
+      </div>
+    </section>
+
+    <section class="py-24 px-6">
+      <div class="max-w-5xl mx-auto">
+        <div class="grid md:grid-cols-3 gap-8">
+          <div class="p-8 rounded-xl bg-card border border-border hover:border-accent/50 transition-colors">
+            <div class="text-accent text-3xl mb-4">&#9881;</div>
+            <h3 class="text-xl font-semibold text-foreground mb-3">Client Platform Engineering</h3>
+            <p class="text-muted-foreground">
+              Managing devices at scale with GitOps, automation, and full-stack development.
+            </p>
+          </div>
+          <div class="p-8 rounded-xl bg-card border border-border hover:border-accent/50 transition-colors">
+            <div class="text-accent-light text-3xl mb-4">&#9889;</div>
+            <h3 class="text-xl font-semibold text-foreground mb-3">DevOps & Automation</h3>
+            <p class="text-muted-foreground">
+              CI/CD pipelines, Terraform multi-cloud infrastructure, GitOps workflows,
+              and serverless automation at enterprise scale.
+            </p>
+          </div>
+          <div class="p-8 rounded-xl bg-card border border-border hover:border-accent/50 transition-colors">
+            <div class="text-accent text-3xl mb-4">&#128274;</div>
+            <h3 class="text-xl font-semibold text-foreground mb-3">Security & Identity</h3>
+            <p class="text-muted-foreground">
+              Zero-trust architecture, osquery compliance checks,
+              and comprehensive vulnerability management.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <Footer />
+  </body>
+</html>
