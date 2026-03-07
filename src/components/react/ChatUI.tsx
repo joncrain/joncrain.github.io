@@ -1,6 +1,7 @@
 import { useChat } from "@ai-sdk/react";
 import { DefaultChatTransport } from "ai";
 import { useEffect, useRef, useState } from "react";
+import { marked } from "marked";
 
 const SUGGESTED_QUESTIONS = [
 	"What does Jon do at Unity?",
@@ -177,13 +178,21 @@ function MessageBubble({
 						: "bg-card border border-border text-card-foreground rounded-bl-md"
 				}`}
 			>
-			{message.parts.map((part) =>
-				part.type === "text" ? (
-					<span key={part.text} className="whitespace-pre-wrap">
-						{part.text}
-					</span>
-				) : null,
-			)}
+				{message.parts.map((part) =>
+					part.type === "text" ? (
+						isUser ? (
+							<span key={part.text} className="whitespace-pre-wrap">
+								{part.text}
+							</span>
+						) : (
+							<div
+								key={part.text}
+								className="prose-chat"
+								dangerouslySetInnerHTML={{ __html: marked.parse(part.text ?? "") }}
+							/>
+						)
+					) : null,
+				)}
 			</div>
 		</div>
 	);
