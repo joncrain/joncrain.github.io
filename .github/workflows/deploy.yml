@@ -5,6 +5,12 @@ on:
     branches: [main]
   pull_request:
     branches: [main]
+  workflow_dispatch:
+    inputs:
+      branch:
+        description: "The branch to deploy"
+        required: true
+        default: "main"
 
 jobs:
   deploy:
