@@ -11,7 +11,7 @@
 	"dependencies": {
 		"@ai-sdk/google": "^3.0.43",
 		"@ai-sdk/react": "^3.0.118",
-		"@astrojs/cloudflare": "^12.6.12",
+		"@astrojs/cloudflare": "^13.6.0",
 		"@astrojs/mdx": "^4.3.13",
 		"@astrojs/react": "^4.4.2",
 		"@astrojs/rss": "^4.0.15",
