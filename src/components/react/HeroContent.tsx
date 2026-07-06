@@ -20,7 +20,7 @@ export default function HeroContent() {
 			>
 				<RotatingText
 					texts={[
-						"Client Platform Engineer",
+						"Staff Client Platform Engineer",
 						"Full-Stack Developer",
 						"Automation Architect",
 						"Open Source Contributor",
@@ -35,9 +35,9 @@ export default function HeroContent() {
 				className="text-lg md:text-xl max-w-2xl mx-auto mb-12 leading-relaxed"
 				style={{ color: "var(--color-muted-foreground)" }}
 			>
-				I build product-quality internal platforms that turn manual IT processes
-				into automated, self-service systems. From full-stack apps to AI
-				integrations, I turn operational pain into engineering solutions.
+				I build internal tools that make manual IT work disappear. From full-stack
+				apps to automation and AI integrations, I focus on systems people actually
+				use.
 			</p>
 
 			<div className="flex flex-col sm:flex-row gap-4 justify-center">

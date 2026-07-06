@@ -8,7 +8,7 @@ import { SITE_TITLE } from "../consts";
 
 <html lang="en">
   <head>
-    <BaseHead title={`About | ${SITE_TITLE}`} description="The story of Jon Crain — from Mac admin to client platform engineer, building tools that scale operations." />
+    <BaseHead title={`About | ${SITE_TITLE}`} description="The story of Jon Crain, from Mac admin to client platform engineer, building tools that scale operations." />
   </head>
   <body class="bg-background text-foreground relative">
     <Header />
@@ -20,7 +20,7 @@ import { SITE_TITLE } from "../consts";
         <header class="mb-16">
           <h1 class="text-4xl md:text-5xl font-bold mb-6">Hey, I'm Jon.</h1>
           <p class="text-xl text-muted-foreground leading-relaxed">
-            I'm a senior client platform engineer who got tired of doing things manually and started
+            I'm a staff client platform engineer who got tired of doing things manually and started
             building software to fix that. What started as scripting Mac deployments has turned
             into building full-stack platforms, AI integrations, and automation systems that
             run at enterprise scale.
@@ -31,17 +31,17 @@ import { SITE_TITLE } from "../consts";
           <h2 class="text-2xl font-semibold mb-6 text-foreground">The Short Version</h2>
           <p class="text-muted-foreground leading-relaxed mb-4">
             I spent nearly a decade at Central Michigan University building macOS management
-            infrastructure from scratch — scaling from a single department to 2,000+ devices
+            infrastructure from scratch, scaling from a single department to 2,000+ devices
             university-wide. I got deep into open source, became a core contributor to
             <a href="https://github.com/munkireport" class="text-accent-light hover:text-foreground">MunkiReport</a>,
             built <a href="https://github.com/joncrain/munkimdm" class="text-accent-light hover:text-foreground">munkiMDM</a>,
             and started speaking at conferences about automation.
           </p>
           <p class="text-muted-foreground leading-relaxed mb-4">
-            In 2020, I joined Unity Technologies as a Senior Client Platform Engineer. That's
+            In 2020, I joined Unity Technologies as a client platform engineer. That's
             where things shifted. Instead of just managing devices, I started <em>building products</em>.
-            The kind of internal tools that product teams would be proud of — not just scripts
-            held together with cron jobs and hope.
+            The kind of internal tools that product teams would be proud of, not just scripts
+            held together with cron jobs and hope. I was promoted to Staff in April 2026.
           </p>
         </section>
 
@@ -52,11 +52,12 @@ import { SITE_TITLE } from "../consts";
             <div class="p-6 rounded-xl bg-card border border-border">
               <h3 class="text-lg font-semibold text-foreground mb-2">What I Build</h3>
               <p class="text-muted-foreground">
-                Most of what I build starts the same way — someone on the team is doing something manually that shouldn't be manual. That friction is usually where I start.<br /><br />
+                Most of what I build starts the same way: someone on the team is doing something manually that should not be manual. That friction is usually where I start.<br /><br />
 
-                The biggest version of that was a full-stack internal platform built with Next.js, TypeScript, tRPC, and Drizzle running on GCP. What started as a way to bring scattered data into one place grew into something the team actually runs their operations from — license management, remote device security controls, leadership dashboards, inventory workflows, and even precise procurement forecasting. It's the project I'm most proud of because it kept growing based on what people actually needed. <br /><br />
-                More recently I built a Slack hygiene tool — a Next.js frontend with a Python/FastAPI backend — because our workspace had become genuinely hard to navigate. It hooks deep into the Slack API to surface stale channels, dormant users, and unused integrations, and gives admins a clean interface to act on them. Simple problem, but the kind of thing that compounds if you ignore it. <br /><br />
-                On the device side, I built a native Swift app that replaced the manual device setup process entirely. Users get a clean interface to handle application installs, self-service options, and system preferences themselves — no IT involvement required.<br /><br />
+                The biggest version of that was a full-stack internal platform built with Next.js, TypeScript, tRPC, and Drizzle running on GCP. What started as a way to bring scattered data into one place grew into something the team actually runs their operations from: license management, remote device security controls, leadership dashboards, inventory workflows, and even precise procurement forecasting. It's the project I'm most proud of because it kept growing based on what people actually needed. <br /><br />
+                More recently I built a Slack hygiene tool, a Next.js frontend with a Python/FastAPI backend, because our workspace had become genuinely hard to navigate. It hooks deep into the Slack API to surface stale channels, dormant users, and unused integrations, and gives admins a clean interface to act on them. Simple problem, but the kind of thing that compounds if you ignore it. <br /><br />
+                Outside of work, I built <a href="https://github.com/joncrain/munki-manager" class="text-accent-light hover:text-foreground">munki-manager</a>, a database-backed web app for managing Munki catalogs and manifests with AutoPkg runs and approvals. There's a live demo at <a href="https://munki-manager.joncra.in" class="text-accent-light hover:text-foreground">munki-manager.joncra.in</a>.<br /><br />
+                On the device side, I built a native Swift app that replaced the manual device setup process entirely. Users get a clean interface to handle application installs, self-service options, and system preferences themselves, with no IT involvement required.<br /><br />
                 The through line across all of it is the same: find the manual process, understand why it exists, and build something that makes it disappear.
               </p>
             </div>
@@ -79,7 +80,7 @@ import { SITE_TITLE } from "../consts";
             <div>
               <h3 class="text-sm font-medium text-accent-light uppercase tracking-wider mb-3">Infrastructure & Cloud</h3>
               <div class="flex flex-wrap gap-2">
-                {['AWS', 'GCP', 'Azure', 'Terraform', 'Kubernetes', 'Docker', 'CI/CD', 'GitOps'].map(skill => (
+                {['AWS', 'GCP', 'Azure', 'Terraform', 'Kubernetes', 'Docker', 'CI/CD', 'GitOps', 'PostgreSQL'].map(skill => (
                   <span class="px-3 py-1 text-sm rounded-full bg-muted text-muted-foreground border border-border">
                     {skill}
                   </span>
@@ -106,6 +107,16 @@ import { SITE_TITLE } from "../consts";
                 ))}
               </div>
             </div>
+            <div>
+              <h3 class="text-sm font-medium text-accent-light uppercase tracking-wider mb-3">Data</h3>
+              <div class="flex flex-wrap gap-2">
+                {['SQL', 'SQLAlchemy'].map(skill => (
+                  <span class="px-3 py-1 text-sm rounded-full bg-muted text-muted-foreground border border-border">
+                    {skill}
+                  </span>
+                ))}
+              </div>
+            </div>
           </div>
         </section>
 
@@ -114,8 +125,26 @@ import { SITE_TITLE } from "../consts";
           <p class="text-muted-foreground leading-relaxed mb-6">
             I've been an active member of the MacAdmins community for years. I've spoken at
             conferences, contributed to open source projects, and helped organize workshops.
+            Published recordings of my talks on conference YouTube channels have been viewed
+            more than 5,000 times.
           </p>
           <div class="flex flex-col gap-6">
+            <a
+              href="https://www.youtube.com/watch?v=x56J8belMYw"
+              target="_blank"
+              rel="noopener"
+              class="group p-6 rounded-xl bg-card border border-border hover:border-accent/50 transition-colors"
+            >
+              <div class="flex items-start gap-4">
+                <div class="text-2xl">&#127909;</div>
+                <div>
+                  <h3 class="text-lg font-semibold text-foreground group-hover:text-accent-light transition-colors">
+                    If You Give a Mac Admin a DB... (Munki Manager)
+                  </h3>
+                  <p class="text-sm text-muted-foreground mt-1">MacDevOpsYUL</p>
+                </div>
+              </div>
+            </a>
             <a
               href="https://www.youtube.com/watch?v=3q0NL04co5U"
               target="_blank"
@@ -126,9 +155,25 @@ import { SITE_TITLE } from "../consts";
                 <div class="text-2xl">&#127909;</div>
                 <div>
                   <h3 class="text-lg font-semibold text-foreground group-hover:text-accent-light transition-colors">
-                    Streamline Your macOS Administration with GitHub Actions
+                    GitHub Actions for the Mac Admin
                   </h3>
                   <p class="text-sm text-muted-foreground mt-1">MacDevOpsYVR</p>
+                </div>
+              </div>
+            </a>
+            <a
+              href="https://www.youtube.com/watch?v=bznnSyl9i48&t=193s"
+              target="_blank"
+              rel="noopener"
+              class="group p-6 rounded-xl bg-card border border-border hover:border-accent/50 transition-colors"
+            >
+              <div class="flex items-start gap-4">
+                <div class="text-2xl">&#127909;</div>
+                <div>
+                  <h3 class="text-lg font-semibold text-foreground group-hover:text-accent-light transition-colors">
+                    Streamline Your macOS Administration with GitHub Actions
+                  </h3>
+                  <p class="text-sm text-muted-foreground mt-1">Penn State MacAdmins Conference</p>
                 </div>
               </div>
             </a>
@@ -154,13 +199,19 @@ import { SITE_TITLE } from "../consts";
         <section class="mb-16">
           <h2 class="text-2xl font-semibold mb-6 text-foreground">Open Source</h2>
           <div class="flex flex-col gap-4">
+            <a href="https://github.com/joncrain/munki-manager" target="_blank" rel="noopener" class="group flex items-center gap-3 text-muted-foreground hover:text-foreground transition-colors">
+              <span class="text-accent-light">&#8594;</span>
+              <span>
+                <strong class="text-foreground group-hover:text-accent-light transition-colors">munki-manager</strong>
+                - Database-backed web app for managing Munki catalogs, manifests, and pkginfo, plus AutoPkg runs and approvals and reporting.
+            </a>
             <a href="https://github.com/munkireport" target="_blank" rel="noopener" class="group flex items-center gap-3 text-muted-foreground hover:text-foreground transition-colors">
               <span class="text-accent-light">&#8594;</span>
-              <span><strong class="text-foreground group-hover:text-accent-light transition-colors">MunkiReport</strong> — Core contributor and module developer. Organized a full-day workshop with the project creator.</span>
+              <span><strong class="text-foreground group-hover:text-accent-light transition-colors">MunkiReport</strong> - Core contributor and module developer. Organized a full-day workshop with the project creator.</span>
             </a>
             <a href="https://github.com/joncrain/munkimdm" target="_blank" rel="noopener" class="group flex items-center gap-3 text-muted-foreground hover:text-foreground transition-colors">
               <span class="text-accent-light">&#8594;</span>
-              <span><strong class="text-foreground group-hover:text-accent-light transition-colors">munkiMDM</strong> — Proof-of-concept integration between MicroMDM and Munki, adopted in production by other admins.</span>
+              <span><strong class="text-foreground group-hover:text-accent-light transition-colors">munkiMDM</strong> - Proof-of-concept integration between MicroMDM and Munki, adopted in production by other admins.</span>
             </a>
           </div>
         </section>
@@ -168,10 +219,10 @@ import { SITE_TITLE } from "../consts";
         <!-- <section>
           <h2 class="text-2xl font-semibold mb-6 text-foreground">Education</h2>
           <p class="text-muted-foreground mb-2">
-            <strong class="text-foreground">Bachelor of Applied Arts</strong>, Central Michigan University — Entrepreneurship
+            <strong class="text-foreground">Bachelor of Applied Arts</strong>, Central Michigan University - Entrepreneurship
           </p>
           <p class="text-muted-foreground mb-6">
-            <strong class="text-foreground">ITIL 4 Foundation Certification</strong> — AXELOS
+            <strong class="text-foreground">ITIL 4 Foundation Certification</strong> - AXELOS
           </p>
           <a
             href="/Resume.pdf"
