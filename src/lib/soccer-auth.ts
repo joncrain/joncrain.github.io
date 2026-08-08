@@ -3,21 +3,18 @@ const TOKEN_PAYLOAD = "mpsc-blue-12u-ok";
 
 type EnvBag = { SOCCER_PASSWORD?: string };
 
-async function getPassword(locals?: unknown): Promise<string | undefined> {
+function getPassword(locals?: unknown, platformEnv?: EnvBag): string | undefined {
 	const fromImport = import.meta.env.SOCCER_PASSWORD as string | undefined;
 	if (fromImport) return fromImport;
+
+	if (platformEnv?.SOCCER_PASSWORD) return platformEnv.SOCCER_PASSWORD;
 
 	const fromLocals = (
 		locals as { runtime?: { env?: EnvBag } } | undefined
 	)?.runtime?.env?.SOCCER_PASSWORD;
 	if (fromLocals) return fromLocals;
 
-	try {
-		const { env } = await import("cloudflare:workers");
-		return (env as EnvBag).SOCCER_PASSWORD;
-	} catch {
-		return undefined;
-	}
+	return undefined;
 }
 
 async function hmacToken(password: string): Promise<string> {
@@ -38,16 +35,18 @@ async function hmacToken(password: string): Promise<string> {
 export async function verifySoccerPassword(
 	password: string,
 	locals?: unknown,
+	platformEnv?: EnvBag,
 ): Promise<boolean> {
-	const expected = await getPassword(locals);
+	const expected = getPassword(locals, platformEnv);
 	if (!expected) return false;
 	return password === expected;
 }
 
 export async function createSoccerAuthCookieValue(
 	locals?: unknown,
+	platformEnv?: EnvBag,
 ): Promise<string | null> {
-	const password = await getPassword(locals);
+	const password = getPassword(locals, platformEnv);
 	if (!password) return null;
 	return hmacToken(password);
 }
@@ -55,9 +54,10 @@ export async function createSoccerAuthCookieValue(
 export async function isSoccerAuthenticated(
 	cookieValue: string | undefined,
 	locals?: unknown,
+	platformEnv?: EnvBag,
 ): Promise<boolean> {
 	if (!cookieValue) return false;
-	const expected = await createSoccerAuthCookieValue(locals);
+	const expected = await createSoccerAuthCookieValue(locals, platformEnv);
 	if (!expected) return false;
 	return cookieValue === expected;
 }

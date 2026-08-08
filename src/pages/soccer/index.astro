@@ -2,11 +2,16 @@
 export const prerender = false;
 
 import "../../styles/global.css";
+import { env } from "cloudflare:workers";
 import SoccerApp from "../../components/react/soccer/SoccerApp";
 import { COOKIE_NAME, isSoccerAuthenticated } from "../../lib/soccer-auth";
 
 const cookie = Astro.cookies.get(COOKIE_NAME)?.value;
-const authenticated = await isSoccerAuthenticated(cookie, Astro.locals);
+const authenticated = await isSoccerAuthenticated(
+	cookie,
+	Astro.locals,
+	env as { SOCCER_PASSWORD?: string },
+);
 ---
 
 <!doctype html>
