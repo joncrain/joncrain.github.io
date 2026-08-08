@@ -1,0 +1,45 @@
+---
+export const prerender = false;
+
+import "../../styles/global.css";
+import SoccerApp from "../../components/react/soccer/SoccerApp";
+import { COOKIE_NAME, isSoccerAuthenticated } from "../../lib/soccer-auth";
+
+const cookie = Astro.cookies.get(COOKIE_NAME)?.value;
+const authenticated = await isSoccerAuthenticated(cookie, Astro.locals);
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+    <meta name="robots" content="noindex, nofollow" />
+    <meta name="theme-color" content="#0B3D91" />
+    <title>Blue 12U · Practice</title>
+    <meta name="description" content="MPSC Blue 12U coach practice plans" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Source+Sans+3:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      html, body {
+        margin: 0;
+        min-height: 100%;
+        background-color: #eef3f9;
+        background-image:
+          linear-gradient(rgba(11, 61, 145, 0.04) 1px, transparent 1px),
+          radial-gradient(ellipse at top, #dbe7f5 0%, #eef3f9 50%, #e4ebf3 100%);
+        background-size: 100% 28px, auto;
+        color: #121820;
+        font-family: "Source Sans 3", system-ui, sans-serif;
+        -webkit-font-smoothing: antialiased;
+      }
+    </style>
+  </head>
+  <body>
+    <SoccerApp client:load authenticated={authenticated} />
+  </body>
+</html>

@@ -9,7 +9,13 @@ import { defineConfig } from "astro/config";
 
 export default defineConfig({
 	site: "https://joncra.in",
-	integrations: [mdx(), sitemap(), react()],
+	integrations: [
+		mdx(),
+		sitemap({
+			filter: (page) => !page.includes("/soccer"),
+		}),
+		react(),
+	],
 	vite: {
 		plugins: [tailwindcss()],
 	},
