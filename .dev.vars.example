@@ -1,0 +1,2 @@
+# Local secrets for `astro dev` / wrangler (do not commit)
+SOCCER_PASSWORD=your-shared-password-here

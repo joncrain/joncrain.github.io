@@ -12,6 +12,15 @@
   --color-border: #2a2a3e;
   --font-sans: "Geist", system-ui, -apple-system, sans-serif;
   --font-mono: "Geist Mono", "JetBrains Mono", "Fira Code", monospace;
+
+  /* MPSC Blue 12U coach app */
+  --color-soccer-blue: #0b3d91;
+  --color-soccer-orange: #f36c00;
+  --color-soccer-field: #eef3f9;
+  --color-soccer-ink: #121820;
+  --color-soccer-muted: #5a6573;
+  --color-soccer-line: #c5d0de;
+  --font-display: "Barlow Condensed", system-ui, sans-serif;
 }
 
 * {
