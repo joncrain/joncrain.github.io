@@ -1,5 +1,5 @@
 import { polygonAreaSqFt, polygonPerimeterFt } from "../../lib/house-geometry";
-import type { Zone } from "./types";
+import type { Point, Zone } from "./types";
 
 function zone(
 	partial: Omit<Zone, "areaSqFt" | "perimeterFt"> & {
@@ -13,9 +13,20 @@ function zone(
 	return { ...partial, areaSqFt, perimeterFt };
 }
 
+/** Regular n-gon approximating a circle (canopy / trampoline). */
+function circlePoly(cx: number, cy: number, r: number, n = 16): Point[] {
+	const pts: Point[] = [];
+	for (let i = 0; i < n; i++) {
+		const a = (Math.PI * 2 * i) / n - Math.PI / 2;
+		pts.push({ x: cx + r * Math.cos(a), y: cy + r * Math.sin(a) });
+	}
+	return pts;
+}
+
 /**
- * Plan-view zones. North = top; Leroy Ln along north edge.
- * Garage + driveway on the **west** (left) — matches street view of the facade.
+ * Zones digitized against Google Maps + GIS screenshots (north up).
+ * Drive/garage on west; trampoline east of house; utility island north
+ * of house; trees north + east (+ west near drive).
  */
 export const zones: Zone[] = [
 	zone({
@@ -23,119 +34,158 @@ export const zones: Zone[] = [
 		name: "House",
 		kind: "structure",
 		polygon: [
-			{ x: 52, y: 52 },
-			{ x: 112, y: 52 },
-			{ x: 112, y: 84 },
-			{ x: 72, y: 84 },
-			{ x: 72, y: 92 },
-			{ x: 52, y: 92 },
+			{ x: 58, y: 58 },
+			{ x: 108, y: 54 },
+			{ x: 112, y: 78 },
+			{ x: 78, y: 82 },
+			{ x: 74, y: 92 },
+			{ x: 54, y: 90 },
 		],
 		source: "derived",
 		confidence: "medium",
-		notes: "House + attached garage on west. Simplified footprint — not a survey.",
+		notes: "Simplified footprint; garage massing on west. Faces roughly NW toward Leroy Ln.",
 	}),
 	zone({
 		id: "driveway",
 		name: "Driveway",
 		kind: "drive",
 		polygon: [
-			{ x: 48, y: 18 },
-			{ x: 72, y: 18 },
-			{ x: 72, y: 92 },
-			{ x: 48, y: 92 },
+			{ x: 36, y: 28 },
+			{ x: 58, y: 22 },
+			{ x: 68, y: 48 },
+			{ x: 72, y: 78 },
+			{ x: 54, y: 90 },
+			{ x: 48, y: 72 },
+			{ x: 42, y: 48 },
 		],
 		source: "derived",
 		confidence: "medium",
-		notes: "Concrete drive from west garage north to Leroy Ln.",
+		notes: "Concrete drive from west garage NW to Leroy Ln curve.",
 	}),
 	zone({
 		id: "front-lawn",
 		name: "Front lawn",
 		kind: "lawn",
 		polygon: [
-			{ x: 72, y: 14 },
-			{ x: 152, y: 14 },
-			{ x: 152, y: 44 },
-			{ x: 112, y: 44 },
-			{ x: 112, y: 52 },
-			{ x: 72, y: 52 },
+			{ x: 58, y: 18 },
+			{ x: 120, y: 16 },
+			{ x: 132, y: 36 },
+			{ x: 112, y: 54 },
+			{ x: 78, y: 52 },
+			{ x: 68, y: 48 },
+			{ x: 58, y: 28 },
 		],
 		source: "estimated",
 		confidence: "medium",
-		notes: "Street-facing turf between house and Leroy Ln (east of drive).",
+		notes: "Turf between house and Leroy Ln (east of drive).",
 	}),
 	zone({
-		id: "side-yard",
-		name: "Side yard (east)",
+		id: "east-lawn",
+		name: "East lawn",
 		kind: "lawn",
 		polygon: [
-			{ x: 112, y: 44 },
-			{ x: 152, y: 44 },
-			{ x: 152, y: 132 },
-			{ x: 112, y: 132 },
+			{ x: 112, y: 54 },
+			{ x: 148, y: 48 },
+			{ x: 160, y: 90 },
+			{ x: 158, y: 130 },
+			{ x: 112, y: 128 },
+			{ x: 108, y: 92 },
+			{ x: 112, y: 78 },
 		],
 		source: "estimated",
 		confidence: "medium",
-		notes: "East side yard — path + firepit concept area.",
-		elevationNotes: "Confirm grade before hardscape.",
+		notes: "Large east lawn — tree + trampoline sit here.",
 	}),
 	zone({
 		id: "rear-lawn",
 		name: "Rear lawn",
 		kind: "lawn",
 		polygon: [
-			{ x: 22, y: 92 },
-			{ x: 112, y: 92 },
-			{ x: 112, y: 142 },
-			{ x: 22, y: 142 },
+			{ x: 40, y: 92 },
+			{ x: 108, y: 92 },
+			{ x: 112, y: 128 },
+			{ x: 48, y: 140 },
+			{ x: 28, y: 120 },
 		],
 		source: "estimated",
 		confidence: "medium",
-		notes: "Rear yard south of house.",
+		notes: "South of house toward neighbor 1846. Full parcel continues farther to the lake.",
 	}),
 	zone({
 		id: "west-lawn",
 		name: "West lawn",
 		kind: "lawn",
 		polygon: [
-			{ x: 18, y: 18 },
-			{ x: 48, y: 18 },
-			{ x: 48, y: 92 },
-			{ x: 18, y: 92 },
+			{ x: 22, y: 40 },
+			{ x: 42, y: 32 },
+			{ x: 48, y: 72 },
+			{ x: 40, y: 92 },
+			{ x: 24, y: 85 },
 		],
 		source: "estimated",
 		confidence: "low",
-		notes: "Strip west of driveway.",
-	}),
-	zone({
-		id: "parking-pad",
-		name: "Side parking pad",
-		kind: "hardscape",
-		polygon: [
-			{ x: 122, y: 68 },
-			{ x: 146, y: 68 },
-			{ x: 146, y: 88 },
-			{ x: 122, y: 88 },
-		],
-		source: "derived",
-		confidence: "medium",
-		notes: "East concrete parking pad.",
+		notes: "Narrow turf west of driveway along the curve.",
 	}),
 	zone({
 		id: "front-bed",
 		name: "Front foundation bed",
 		kind: "bed",
 		polygon: [
-			{ x: 72, y: 44 },
-			{ x: 116, y: 44 },
-			{ x: 116, y: 48 },
-			{ x: 112, y: 48 },
-			{ x: 112, y: 52 },
-			{ x: 72, y: 52 },
+			{ x: 72, y: 50 },
+			{ x: 108, y: 48 },
+			{ x: 110, y: 56 },
+			{ x: 78, y: 58 },
+			{ x: 70, y: 56 },
 		],
 		source: "estimated",
-		confidence: "low",
-		notes: "Foundation planting bed along front facade.",
+		confidence: "medium",
+		notes: "Wavy river-rock bed with boxwoods along the front facade.",
+	}),
+	zone({
+		id: "utility-island",
+		name: "Utility island",
+		kind: "bed",
+		polygon: circlePoly(70, 34, 7, 14),
+		source: "derived",
+		confidence: "high",
+		notes:
+			"Standalone island north of the house: river rock, bushes, and utility box (visible in drone + Maps).",
+	}),
+	zone({
+		id: "trampoline",
+		name: "Trampoline",
+		kind: "hardscape",
+		polygon: circlePoly(122, 88, 9, 20),
+		source: "derived",
+		confidence: "high",
+		notes: "Circular trampoline on the lawn immediately east of the house.",
+	}),
+	zone({
+		id: "tree-north",
+		name: "Tree (north)",
+		kind: "other",
+		polygon: circlePoly(95, 28, 8, 14),
+		source: "derived",
+		confidence: "high",
+		notes: "Canopy north of the house, between house and Leroy Ln.",
+	}),
+	zone({
+		id: "tree-east",
+		name: "Tree (east)",
+		kind: "other",
+		polygon: circlePoly(142, 78, 9, 14),
+		source: "derived",
+		confidence: "high",
+		notes: "Canopy in the east lawn, near the trampoline.",
+	}),
+	zone({
+		id: "tree-west",
+		name: "Tree (west)",
+		kind: "other",
+		polygon: circlePoly(38, 42, 7, 14),
+		source: "estimated",
+		confidence: "medium",
+		notes: "Larger tree near driveway / road curve (west).",
 	}),
 ];
 

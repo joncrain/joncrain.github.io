@@ -4,7 +4,7 @@ export const careEvents: CareEvent[] = [
 	{
 		id: "mow-2026-08-01",
 		type: "mow",
-		zoneIds: ["front-lawn", "side-yard", "rear-lawn"],
+		zoneIds: ["front-lawn", "east-lawn", "rear-lawn", "west-lawn"],
 		date: "2026-08-01",
 		status: "done",
 		title: "Mowed lawns",
@@ -13,7 +13,7 @@ export const careEvents: CareEvent[] = [
 	{
 		id: "fert-fall-2026",
 		type: "fertilize",
-		zoneIds: ["front-lawn", "side-yard", "rear-lawn"],
+		zoneIds: ["front-lawn", "east-lawn", "rear-lawn", "west-lawn"],
 		date: "2026-09-15",
 		status: "planned",
 		title: "Fall fertilizer — lawns",
