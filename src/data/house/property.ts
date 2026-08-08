@@ -5,14 +5,14 @@ import type { PropertyInfo } from "./types";
  * - Origin top-left of drawing
  * - +x east, +y south (north at top)
  * - Units: feet
- * Geometry is concept-grade from Isabella County parcel (0.51 ac) + aerials;
- * not a survey. Tighten with FetchGIS polygon / tape later.
+ * Street (Leroy Ln) along north edge. Garage/drive on west (matches
+ * street-facing view: garage on right when looking at the front).
  */
 export const property: PropertyInfo = {
 	label: "1890 Leroy Ln · Exterior",
 	timezone: "America/New_York",
 	originNote:
-		"Vector landscape site plan (plan view). North at top. Parcel 14-073-00-005-00 — 1890 Leroy Ln, Mt Pleasant, MI — 0.51 ac ≈ 22,216 sq ft (Isabella County). Street (Leroy Ln) along north edge. Digitized for care/planning, not construction staking.",
+		"Vector landscape site plan (plan view). North at top; +x east. Parcel 14-073-00-005-00 — 1890 Leroy Ln, Mt Pleasant, MI — 0.51 ac ≈ 22,216 sq ft. Garage/drive on west side of house. Concept-grade — not a survey.",
 	northIsNegativeY: true,
 	lotAreaSqFt: 22216,
 	underlay: {

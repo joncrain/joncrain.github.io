@@ -283,11 +283,11 @@ export default function SiteMap({
 						);
 					})}
 
-				{/* Concept overlays: side path + firepit */}
+				{/* Concept overlays: side path + firepit (east side yard) */}
 				{pathIdea && sideYard && (
 					<g opacity={0.85} pointerEvents="none">
 						<path
-							d="M 28 50 L 28 120"
+							d="M 132 50 L 132 120"
 							fill="none"
 							stroke="#8a5a3a"
 							strokeWidth={3.5}
@@ -295,7 +295,7 @@ export default function SiteMap({
 							strokeLinecap="round"
 						/>
 						<text
-							x={33}
+							x={137}
 							y={86}
 							fontSize={2.8}
 							fontFamily="Georgia, serif"
@@ -308,7 +308,7 @@ export default function SiteMap({
 				{firepitIdea && (
 					<g opacity={0.9} pointerEvents="none">
 						<circle
-							cx={38}
+							cx={138}
 							cy={110}
 							r={6}
 							fill="none"
@@ -316,9 +316,9 @@ export default function SiteMap({
 							strokeWidth={0.7}
 							strokeDasharray="2 1.5"
 						/>
-						<circle cx={38} cy={110} r={2.2} fill="#c4a35a" opacity={0.7} />
+						<circle cx={138} cy={110} r={2.2} fill="#c4a35a" opacity={0.7} />
 						<text
-							x={46}
+							x={146}
 							y={111}
 							fontSize={2.8}
 							fontFamily="Georgia, serif"

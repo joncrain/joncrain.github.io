@@ -6,7 +6,7 @@ export const projects: HouseProject[] = [
 		title: "Side yard path",
 		status: "idea",
 		zoneIds: ["side-yard"],
-		notes: "Walkable path through west side yard; materials and alignment TBD.",
+		notes: "Walkable path through east side yard; materials and alignment TBD.",
 	},
 	{
 		id: "firepit",
@@ -14,6 +14,6 @@ export const projects: HouseProject[] = [
 		status: "idea",
 		zoneIds: ["side-yard"],
 		notes:
-			"Sitting area + firepit. Check setbacks, elevation, and condo/master-deed rules before building.",
+			"Sitting area + firepit on east side. Check setbacks, elevation, and condo/master-deed rules before building.",
 	},
 ];
