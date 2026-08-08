@@ -20,6 +20,9 @@ pnpm-debug.log*
 # macOS-specific files
 .DS_Store
 
+# brainstorm companion mockups
+.superpowers/
+
 # jetbrains setting folder
 .idea/
 .agents/
