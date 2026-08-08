@@ -1,18 +1,31 @@
 import type { PropertyInfo } from "./types";
 
+/**
+ * Illustrative landscape site plan CRS:
+ * - Origin top-left of drawing
+ * - +x east, +y south (north at top)
+ * - Units: feet
+ * Geometry is concept-grade from Isabella County parcel (0.51 ac) + aerials;
+ * not a survey. Tighten with FetchGIS polygon / tape later.
+ */
 export const property: PropertyInfo = {
 	label: "1890 Leroy Ln · Exterior",
 	timezone: "America/New_York",
 	originNote:
-		"Origin at top-left of underlay image; +x right, +y down (image space). Underlay is drone aerial IMG_2938 scaled to ~160×120 ft covering the visible front/side of the lot (not the full parcel). Official parcel 14-073-00-005-00 (Isabella County): 1890 Leroy Ln, Mt Pleasant, MI 48858 — 0.51 ac ≈ 22,216 sq ft. Digitized zone surfaces on this crop sum ~11.8k sq ft; remaining area is off-frame (rear/east) plus untraced turf. Facade OCR sometimes misreads as 1680; GIS and street sequence confirm 1890. Next accuracy step: overlay FetchGIS parcel polygon + tape driveway width.",
+		"Vector landscape site plan (plan view). North at top. Parcel 14-073-00-005-00 — 1890 Leroy Ln, Mt Pleasant, MI — 0.51 ac ≈ 22,216 sq ft (Isabella County). Street (Leroy Ln) along north edge. Digitized for care/planning, not construction staking.",
 	northIsNegativeY: true,
 	lotAreaSqFt: 22216,
 	underlay: {
-		src: "/house/underlay.jpg",
-		widthFt: 160,
-		heightFt: 120,
+		widthFt: 170,
+		heightFt: 160,
 	},
+	lotOutline: [
+		{ x: 12, y: 8 },
+		{ x: 158, y: 8 },
+		{ x: 158, y: 148 },
+		{ x: 12, y: 148 },
+	],
 	roof: {
-		notes: "Complex multi-gable asphalt; solar array on main ridge. Pitch/area TBD from plans or measure.",
+		notes: "Complex multi-gable; solar on main ridge. Pitch/area TBD.",
 	},
 };

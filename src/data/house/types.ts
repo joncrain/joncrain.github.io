@@ -20,13 +20,17 @@ export interface PropertyInfo {
 	label: string;
 	timezone: string;
 	originNote: string;
+	/** When true, SVG +y is south (north at top of drawing). */
 	northIsNegativeY: boolean;
 	lotAreaSqFt?: number;
+	/** Plan extents in feet. Optional `src` photo underlay — omit for vector site plan. */
 	underlay: {
-		src: string;
+		src?: string;
 		widthFt: number;
 		heightFt: number;
 	};
+	/** Property / lot outline in plan feet (dash-dot property line). */
+	lotOutline: Point[];
 	roof?: { areaSqFt?: number; pitch?: string; notes?: string };
 }
 
