@@ -226,34 +226,42 @@ export default function SiteMap({
 						width={widthFt}
 						height={heightFt}
 						preserveAspectRatio="none"
-						opacity={0.25}
+						opacity={0.55}
 					/>
 				)}
 
-				{/* Curved street edge along north/west frontage */}
-				<path
-					d="M 15 55 Q 30 18 78 8 Q 120 6 150 30"
-					fill="none"
-					stroke="#8a8478"
-					strokeWidth={2.2}
-				/>
-				<text
-					x={78}
-					y={5}
-					textAnchor="middle"
-					fontSize={3.2}
-					fontFamily="Georgia, serif"
-					letterSpacing={1.1}
-					fill="#5c6758"
-				>
-					LEROY LN
-				</text>
+				{/* Street label — only when no photo underlay */}
+				{!src && (
+					<>
+						<path
+							d="M 15 55 Q 30 18 78 8 Q 120 6 150 30"
+							fill="none"
+							stroke="#8a8478"
+							strokeWidth={2.2}
+						/>
+						<text
+							x={78}
+							y={5}
+							textAnchor="middle"
+							fontSize={3.2}
+							fontFamily="Georgia, serif"
+							letterSpacing={1.1}
+							fill="#5c6758"
+						>
+							LEROY LN
+						</text>
+					</>
+				)}
 
 				{ordered.map((zone) => {
 					const selected = zone.id === selectedZoneId;
 					if (isTree(zone)) {
 						return (
-							<g key={zone.id} onClick={() => onSelectZone(zone.id)}>
+							<g
+								key={zone.id}
+								className="cursor-pointer"
+								onClick={() => onSelectZone(zone.id)}
+							>
 								<TreeCanopy zone={zone} selected={selected} />
 							</g>
 						);
@@ -261,6 +269,7 @@ export default function SiteMap({
 
 					const isUtility = zone.id === "utility-island";
 					const isTrampoline = zone.id === "trampoline";
+					const baseOpacity = src ? 0.45 : 0.88;
 
 					return (
 						<g key={zone.id}>
@@ -274,16 +283,22 @@ export default function SiteMap({
 											: KIND_FILL[zone.kind]
 								}
 								fillOpacity={
-									isTrampoline ? (selected ? 0.55 : 0.4) : selected ? 0.95 : 0.88
+									isTrampoline
+										? selected
+											? 0.55
+											: 0.35
+										: selected
+											? Math.min(baseOpacity + 0.25, 0.9)
+											: baseOpacity
 								}
 								stroke={selected ? "#1c2419" : KIND_STROKE[zone.kind]}
-								strokeWidth={selected ? 1.1 : 0.45}
+								strokeWidth={selected ? 1.4 : 0.7}
 								className="cursor-pointer"
 								onClick={() => onSelectZone(zone.id)}
 							>
 								<title>{zone.name}</title>
 							</polygon>
-							{zone.kind === "lawn" && (
+							{zone.kind === "lawn" && !src && (
 								<polygon
 									points={pointsToSvg(zone.polygon)}
 									fill="url(#lawn-hatch)"
