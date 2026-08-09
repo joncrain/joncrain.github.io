@@ -1,2 +1,4 @@
 # Local secrets for `astro dev` / wrangler (do not commit)
 SOCCER_PASSWORD=your-shared-password-here
+HOUSE_PASSWORD=your-house-password-here
+HOUSE_ICS_TOKEN=your-ics-subscribe-token-here

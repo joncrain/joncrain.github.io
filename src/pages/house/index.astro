@@ -1,0 +1,83 @@
+---
+export const prerender = false;
+
+import "../../styles/global.css";
+import { env } from "cloudflare:workers";
+import HouseApp from "../../components/react/house/HouseApp";
+import { COOKIE_NAME, isHouseAuthenticated } from "../../lib/house-auth";
+
+const cookie = Astro.cookies.get(COOKIE_NAME)?.value;
+const platformEnv = env as {
+	HOUSE_PASSWORD?: string;
+	HOUSE_ICS_TOKEN?: string;
+};
+const authenticated = await isHouseAuthenticated(
+	cookie,
+	Astro.locals,
+	platformEnv,
+);
+
+const icsToken =
+	(import.meta.env.HOUSE_ICS_TOKEN as string | undefined) ??
+	platformEnv.HOUSE_ICS_TOKEN ??
+	(
+		Astro.locals as { runtime?: { env?: { HOUSE_ICS_TOKEN?: string } } }
+	)?.runtime?.env?.HOUSE_ICS_TOKEN;
+
+const calendarSubscribeUrl =
+	authenticated && icsToken
+		? `${Astro.url.origin}/house/calendar.ics?token=${encodeURIComponent(icsToken)}`
+		: null;
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+    <meta name="robots" content="noindex, nofollow" />
+    <meta name="theme-color" content="#3f6b45" />
+    <title>House · Exterior</title>
+    <meta name="description" content="Private exterior yard map and care schedule" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Source+Sans+3:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --house-ink: #1c2419;
+        --house-muted: #5c6758;
+        --house-moss: #3f6b45;
+        --house-moss-deep: #2a4530;
+        --house-soil: #8a5a3a;
+        --house-paper: #f3efe6;
+        --house-field: #e7e1d4;
+        --house-line: #cfc6b6;
+      }
+      html, body {
+        margin: 0;
+        min-height: 100%;
+        background-color: #e8e2d6;
+        background-image:
+          radial-gradient(ellipse at top, #efe8da 0%, #e8e2d6 45%, #ddd5c6 100%),
+          linear-gradient(rgba(63, 107, 69, 0.04) 1px, transparent 1px);
+        background-size: auto, 100% 28px;
+        color: var(--house-ink);
+        font-family: "Source Sans 3", system-ui, sans-serif;
+        -webkit-font-smoothing: antialiased;
+      }
+      .font-display {
+        font-family: "Fraunces", Georgia, serif;
+      }
+    </style>
+  </head>
+  <body>
+    <HouseApp
+      client:load
+      authenticated={authenticated}
+      calendarSubscribeUrl={calendarSubscribeUrl}
+    />
+  </body>
+</html>

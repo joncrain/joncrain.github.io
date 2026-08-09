@@ -12,7 +12,7 @@ export default defineConfig({
 	integrations: [
 		mdx(),
 		sitemap({
-			filter: (page) => !page.includes("/soccer"),
+			filter: (page) => !page.includes("/soccer") && !page.includes("/house"),
 		}),
 		react(),
 	],
