@@ -269,7 +269,7 @@ export default function SiteMap({
 
 					const isUtility = zone.id === "utility-island";
 					const isTrampoline = zone.id === "trampoline";
-					const baseOpacity = src ? 0.45 : 0.88;
+					const baseOpacity = src ? 0.28 : 0.88;
 
 					return (
 						<g key={zone.id}>
@@ -291,8 +291,8 @@ export default function SiteMap({
 											? Math.min(baseOpacity + 0.25, 0.9)
 											: baseOpacity
 								}
-								stroke={selected ? "#1c2419" : KIND_STROKE[zone.kind]}
-								strokeWidth={selected ? 1.4 : 0.7}
+								stroke={selected ? "#ffcc00" : KIND_STROKE[zone.kind]}
+								strokeWidth={selected ? 2.2 : src ? 1.4 : 0.7}
 								className="cursor-pointer"
 								onClick={() => onSelectZone(zone.id)}
 							>
