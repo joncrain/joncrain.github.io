@@ -90,9 +90,11 @@ function LoginGate({ onSuccess }: { onSuccess: () => void }) {
 export default function HouseApp({
 	authenticated: initialAuth,
 	calendarSubscribeUrl,
+	ideasShareUrl,
 }: {
 	authenticated: boolean;
 	calendarSubscribeUrl: string | null;
+	ideasShareUrl: string | null;
 }) {
 	const [authed, setAuthed] = useState(initialAuth);
 	const [selectedZoneId, setSelectedZoneId] = useState<string | null>(null);
@@ -204,7 +206,11 @@ export default function HouseApp({
 					/>
 				)}
 				{tab === "projects" && (
-					<ProjectsTab projects={projects} zones={zones} />
+					<ProjectsTab
+						projects={projects}
+						zones={zones}
+						ideasShareUrl={ideasShareUrl}
+					/>
 				)}
 			</div>
 		</div>

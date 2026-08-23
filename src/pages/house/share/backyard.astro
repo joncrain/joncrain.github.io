@@ -1,0 +1,99 @@
+---
+export const prerender = false;
+
+import "../../../styles/global.css";
+import { env } from "cloudflare:workers";
+import ProjectIdeaBoard from "../../../components/react/house/ProjectIdeaBoard";
+import { getBoardForProject } from "../../../data/house/ideas";
+import { projects } from "../../../data/house/projects";
+import { property } from "../../../data/house/property";
+
+type EnvBag = { HOUSE_IDEAS_TOKEN?: string };
+
+function getIdeasToken(locals?: unknown, platformEnv?: EnvBag): string | undefined {
+	const fromImport = import.meta.env.HOUSE_IDEAS_TOKEN as string | undefined;
+	if (fromImport) return fromImport;
+	if (platformEnv?.HOUSE_IDEAS_TOKEN) return platformEnv.HOUSE_IDEAS_TOKEN;
+	const fromLocals = (
+		locals as { runtime?: { env?: EnvBag } } | undefined
+	)?.runtime?.env?.HOUSE_IDEAS_TOKEN;
+	if (fromLocals) return fromLocals;
+	return undefined;
+}
+
+const expected = getIdeasToken(Astro.locals, env as EnvBag);
+const token = Astro.url.searchParams.get("token") ?? "";
+if (!expected || token !== expected) {
+	return new Response("Unauthorized", { status: 401 });
+}
+
+const board = getBoardForProject("backyard-redo");
+const project = projects.find((p) => p.id === "backyard-redo");
+if (!board || !project) {
+	return new Response("Not found", { status: 404 });
+}
+---
+
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+    <meta name="robots" content="noindex, nofollow" />
+    <meta name="theme-color" content="#3f6b45" />
+    <title>{project.title} · Ideas</title>
+    <meta name="description" content="Backyard redo idea board" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,600;9..144,700&family=Source+Sans+3:wght@400;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      :root {
+        --house-ink: #1c2419;
+        --house-muted: #5c6758;
+        --house-moss: #3f6b45;
+        --house-moss-deep: #2a4530;
+        --house-soil: #8a5a3a;
+        --house-paper: #f3efe6;
+        --house-field: #e7e1d4;
+        --house-line: #cfc6b6;
+      }
+      html, body {
+        margin: 0;
+        min-height: 100%;
+        background-color: #e8e2d6;
+        background-image:
+          radial-gradient(ellipse at top, #efe8da 0%, #e8e2d6 45%, #ddd5c6 100%),
+          linear-gradient(rgba(63, 107, 69, 0.04) 1px, transparent 1px);
+        background-size: auto, 100% 28px;
+        color: var(--house-ink);
+        font-family: "Source Sans 3", system-ui, sans-serif;
+        -webkit-font-smoothing: antialiased;
+      }
+      .font-display {
+        font-family: "Fraunces", Georgia, serif;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="mx-auto min-h-[100dvh] max-w-3xl px-4 pb-10 pt-5">
+      <header class="mb-6">
+        <p class="font-display text-[11px] font-bold uppercase tracking-[0.16em] text-[var(--house-soil)]">
+          Shared idea board
+        </p>
+        <h1 class="font-display text-3xl font-bold leading-none text-[var(--house-ink)]">
+          {project.title}
+        </h1>
+        <p class="mt-1 text-sm text-[var(--house-muted)]">{property.label}</p>
+        {project.notes && (
+          <p class="mt-3 text-sm leading-snug text-[var(--house-ink)]/85">
+            {project.notes}
+          </p>
+        )}
+      </header>
+      <ProjectIdeaBoard client:load board={board} />
+    </div>
+  </body>
+</html>

@@ -36,6 +36,7 @@ jobs:
           SOCCER_PASSWORD: ${{ secrets.SOCCER_PASSWORD }}
           HOUSE_PASSWORD: ${{ secrets.HOUSE_PASSWORD }}
           HOUSE_ICS_TOKEN: ${{ secrets.HOUSE_ICS_TOKEN }}
+          HOUSE_IDEAS_TOKEN: ${{ secrets.HOUSE_IDEAS_TOKEN }}
 
       - name: Deploy to Cloudflare Workers
         if: github.event_name == 'push' && github.ref == 'refs/heads/main'

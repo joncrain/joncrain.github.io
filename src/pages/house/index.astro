@@ -10,6 +10,7 @@ const cookie = Astro.cookies.get(COOKIE_NAME)?.value;
 const platformEnv = env as {
 	HOUSE_PASSWORD?: string;
 	HOUSE_ICS_TOKEN?: string;
+	HOUSE_IDEAS_TOKEN?: string;
 };
 const authenticated = await isHouseAuthenticated(
 	cookie,
@@ -24,9 +25,21 @@ const icsToken =
 		Astro.locals as { runtime?: { env?: { HOUSE_ICS_TOKEN?: string } } }
 	)?.runtime?.env?.HOUSE_ICS_TOKEN;
 
+const ideasToken =
+	(import.meta.env.HOUSE_IDEAS_TOKEN as string | undefined) ??
+	platformEnv.HOUSE_IDEAS_TOKEN ??
+	(
+		Astro.locals as { runtime?: { env?: { HOUSE_IDEAS_TOKEN?: string } } }
+	)?.runtime?.env?.HOUSE_IDEAS_TOKEN;
+
 const calendarSubscribeUrl =
 	authenticated && icsToken
 		? `${Astro.url.origin}/house/calendar.ics?token=${encodeURIComponent(icsToken)}`
+		: null;
+
+const ideasShareUrl =
+	authenticated && ideasToken
+		? `${Astro.url.origin}/house/share/backyard?token=${encodeURIComponent(ideasToken)}`
 		: null;
 ---
 
@@ -78,6 +91,7 @@ const calendarSubscribeUrl =
       client:load
       authenticated={authenticated}
       calendarSubscribeUrl={calendarSubscribeUrl}
+      ideasShareUrl={ideasShareUrl}
     />
   </body>
 </html>

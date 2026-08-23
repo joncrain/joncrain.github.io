@@ -2,6 +2,14 @@ import type { HouseProject } from "./types";
 
 export const projects: HouseProject[] = [
 	{
+		id: "backyard-redo",
+		title: "Backyard redo",
+		status: "planning",
+		zoneIds: ["rear-lawn", "east-lawn"],
+		notes:
+			"Landscape refresh toward the water — path, plantings, and hardscape ideas. Open for the photo idea board.",
+	},
+	{
 		id: "side-path",
 		title: "Side yard path",
 		status: "idea",

@@ -2,3 +2,4 @@
 SOCCER_PASSWORD=your-shared-password-here
 HOUSE_PASSWORD=your-house-password-here
 HOUSE_ICS_TOKEN=your-ics-subscribe-token-here
+HOUSE_IDEAS_TOKEN=your-landscaper-share-token-here
