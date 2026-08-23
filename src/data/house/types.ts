@@ -67,6 +67,21 @@ export interface HouseProject {
 	notes?: string;
 }
 
+export type IdeaSection = "existing" | "inspiration" | "concepts";
+
+export interface IdeaPhoto {
+	id: string;
+	src: string;
+	caption: string;
+	section: IdeaSection;
+	sort?: number;
+}
+
+export interface ProjectBoard {
+	projectId: string;
+	photos: IdeaPhoto[];
+}
+
 export const ZONE_KIND_LABELS: Record<ZoneKind, string> = {
 	lawn: "Lawn",
 	bed: "Bed",
@@ -82,4 +97,10 @@ export const CARE_TYPE_LABELS: Record<CareType, string> = {
 	trim: "Trim",
 	treat: "Treat",
 	other: "Other",
+};
+
+export const IDEA_SECTION_LABELS: Record<IdeaSection, string> = {
+	existing: "Existing",
+	inspiration: "Inspiration",
+	concepts: "Concepts",
 };
