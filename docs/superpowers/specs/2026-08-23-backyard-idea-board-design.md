@@ -7,11 +7,12 @@
 
 ## Problem
 
-Backyard redo thinking is scattered across drone photos, deck shots, inspiration images, and concept renders. There is no place inside `/house` to browse them with captions next to the existing Projects list.
+Backyard redo thinking is scattered across drone photos, deck shots, inspiration images, and concept renders. There is no place inside `/house` to browse them with captions next to the existing Projects list — or to send a clean board to a landscaper without sharing the full house hub.
 
 ## Goal
 
-Expand **Projects** so **Backyard redo** opens a captioned **idea board** grouped into Existing / Inspiration / Concepts.
+1. Expand **Projects** so **Backyard redo** opens a captioned **idea board** grouped into Existing / Inspiration / Concepts.
+2. Provide a **secret link** the landscaper can open that shows **only** that board (no map, care, or other projects).
 
 ## Decisions (locked)
 
@@ -21,24 +22,25 @@ Expand **Projects** so **Backyard redo** opens a captioned **idea board** groupe
 | Captions / photos | File-based (data + `public/` images); redeploy to update |
 | Grouping | Sections: Existing · Inspiration · Concepts |
 | Approach | Project detail + board + lightbox |
+| Landscaper access | Secret URL with token query param (same pattern as ICS) |
 
 ## Non-goals (v1)
 
 - In-browser upload or caption editing
 - Map annotations linking board items to zones
-- Public/unauthenticated sharing
+- Fully public unlisted board with no token
 - Requiring every file in `photos/` on day one
+- Landscaper write access or commenting
 
 ## Architecture
 
 ```
-Projects tab
-  └─ project list
-       └─ Backyard redo → ProjectIdeaBoard
-            ├─ Existing
-            ├─ Inspiration
-            └─ Concepts
-                 └─ click → PhotoLightbox
+/house (cookie auth)
+  Projects tab
+    └─ Backyard redo → ProjectIdeaBoard (+ copy share link)
+
+/house/share/backyard?token=…  (token auth only)
+  └─ same ProjectIdeaBoard, standalone page (no map/tabs)
 ```
 
 **Files**
@@ -49,6 +51,8 @@ Projects tab
 - `src/components/react/house/ProjectsTab.tsx` — list vs detail
 - `src/components/react/house/ProjectIdeaBoard.tsx` — sections + grid
 - `src/components/react/house/PhotoLightbox.tsx` — overlay viewer
+- `src/pages/house/share/backyard.astro` — token-gated share page (`prerender = false`)
+- Env: `HOUSE_IDEAS_TOKEN` (GitHub secret + deploy.yml + `.dev.vars.example`)
 
 ### Data shapes
 
@@ -71,16 +75,32 @@ interface ProjectBoard {
 
 Projects without a matching board remain simple cards (notes only).
 
+### Share access
+
+- **URL:** `/house/share/backyard?token=<HOUSE_IDEAS_TOKEN>`
+- Missing/wrong token → **401** (plain or short “Unauthorized” page)
+- Correct token → board only: title, short intro, sections, lightbox
+- `noindex, nofollow`
+- **Not** cookie-gated (landscaper never logs into `/house`)
+- Inside authenticated `/house` project detail: **Copy share link** (server builds absolute URL with token, same approach as calendar ICS copy)
+- Revoke/rotate: change `HOUSE_IDEAS_TOKEN` and redeploy
+
 ## UI
 
 **List:** Existing project cards; Backyard redo may show “Idea board · N photos”.
 
-**Detail:**
+**Detail (authenticated):**
 - Back control to project list
 - Title, status, notes
+- Copy share link control
 - Section headings only when that section has photos
 - Responsive grid (2 cols mobile / 3 desktop)
 - Card: image (`object-cover`) + caption **below** the image (not overlaid)
+
+**Share page (token):**
+- Same board visual language; no house nav/map/care
+- Header: “Backyard redo · Ideas” + optional one-line note for the landscaper
+- No “copy share link” / no edit chrome
 
 **Lightbox:** Dimmed overlay; contained image; caption; close via backdrop, Esc, or ✕. Optional prev/next within the board if inexpensive.
 
@@ -104,9 +124,13 @@ Draft captions in `ideas.ts` (editable anytime). Prefer JPEG ≤ ~1MB each for w
 - Projects without boards still render as simple cards
 - Captions visible under thumbnails; lightbox opens/closes
 - Images load from `/house/ideas/backyard/…`
-- Auth unchanged; `/house` still noindex
+- Share URL with correct token shows board only; wrong/missing token → 401
+- Share page has no map / care / other projects
+- Cookie auth for `/house` unchanged; both pages noindex
+- Sitemap excludes `/house` (including share path)
 
 ## Open at implementation
 
 - Exact seed subset and final caption wording (draft OK)
 - Whether lightbox keyboard prev/next ships in the same PR (include if small)
+- Exact landscaper intro blurb on the share page (short default OK)
