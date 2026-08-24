@@ -43,7 +43,7 @@ export default function PhotoLightbox({
 
 	return (
 		<div
-			className="fixed inset-0 z-50 flex flex-col bg-black/85"
+			className="fixed inset-0 z-50 flex flex-col bg-black/90"
 			role="dialog"
 			aria-modal="true"
 			aria-label={photo.caption}
@@ -67,23 +67,23 @@ export default function PhotoLightbox({
 					✕
 				</button>
 			</div>
-			<div className="relative z-10 flex min-h-0 flex-1 items-center justify-center gap-2 px-2 pb-4">
+			<div className="relative z-10 flex min-h-0 flex-1 items-center justify-center px-12 pb-4 sm:px-16">
 				<button
 					type="button"
 					onClick={goPrev}
 					disabled={!hasPrev}
-					className="shrink-0 rounded-md px-3 py-8 text-2xl text-[var(--house-paper)] disabled:opacity-30"
+					className="absolute left-1 top-1/2 z-20 -translate-y-1/2 rounded-md px-3 py-6 text-3xl text-[var(--house-paper)] disabled:opacity-30 sm:left-2"
 					aria-label="Previous photo"
 				>
 					‹
 				</button>
-				<figure className="flex max-h-full max-w-full flex-col items-center">
+				<figure className="flex h-full w-full max-w-[min(100%,1400px)] flex-col items-center justify-center">
 					<img
 						src={photo.src}
 						alt={photo.caption}
-						className="max-h-[min(70dvh,720px)] max-w-full object-contain"
+						className="max-h-[min(82dvh,960px)] w-auto max-w-full object-contain"
 					/>
-					<figcaption className="mt-3 max-w-lg px-2 text-center text-sm leading-snug text-[var(--house-paper)]/90">
+					<figcaption className="mt-3 max-w-2xl px-2 text-center text-sm leading-snug text-[var(--house-paper)]/90">
 						{photo.caption}
 					</figcaption>
 				</figure>
@@ -91,7 +91,7 @@ export default function PhotoLightbox({
 					type="button"
 					onClick={goNext}
 					disabled={!hasNext}
-					className="shrink-0 rounded-md px-3 py-8 text-2xl text-[var(--house-paper)] disabled:opacity-30"
+					className="absolute right-1 top-1/2 z-20 -translate-y-1/2 rounded-md px-3 py-6 text-3xl text-[var(--house-paper)] disabled:opacity-30 sm:right-2"
 					aria-label="Next photo"
 				>
 					›
