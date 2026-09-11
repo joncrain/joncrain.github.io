@@ -44,7 +44,7 @@
 		"picomatch": "4.0.7",
 		"postcss": "8.5.24",
 		"sharp": "$sharp",
-		"smol-toml": "1.6.1",
+		"smol-toml": "1.7.2",
 		"svgo": "4.1.0",
 		"undici": "7.29.0",
 		"ws": "8.21.0",
